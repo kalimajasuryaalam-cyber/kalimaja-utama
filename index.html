@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charSet="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalimaja Airtron – Solusi Penghemat Listrik AC Tanpa Dana di Muka</title>
+    
+    <!-- SEO & Meta Tags -->
+    <meta name="description" content="Kalimaja Airtron menyediakan solusi penghematan listrik AC dengan skema rental tanpa dana di muka (Zero CAPEX). Melayani perkantoran, hotel, rumah sakit, sekolah, pabrik, dan retail." />
+    <meta name="keywords" content="Penghemat Listrik AC, Solusi Hemat Listrik AC, Rental Penghemat Listrik AC, Zero CAPEX Penghematan Listrik, Efisiensi Energi AC" />
+    <meta name="author" content="kalimaja" />
+    
+    <!-- Tailwind & Fonts & Icons -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #f8fafc; color: #0f172a; }
+        .glass-nav { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.3); }
+        .glass-card { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border: 1px solid rgba(226, 232, 240, 0.8); }
+        .text-gradient { background: linear-gradient(to right, #2563eb, #4f46e5); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .bg-gradient-brand { background: linear-gradient(135deg, #020617 0%, #1e1b4b 100%); }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        .modal-hidden { opacity: 0; pointer-events: none; transform: scale(0.95); }
+        .modal-visible { opacity: 1; pointer-events: auto; transform: scale(1); }
+
+        /* Mobile Menu Transitions */
+        #mobile-menu { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); transform: translateY(-100%); opacity: 0; pointer-events: none; }
+        #mobile-menu.active { transform: translateY(0); opacity: 1; pointer-events: auto; }
+
+        /* Print Settings Khusus Self Assessment */
+        @page { size: A4 portrait; margin: 15mm; }
+        @media print {
+            * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+            body { background: #ffffff !important; height: auto !important; overflow: visible !important; margin: 0 !important; padding: 0 !important; }
+            
+            body.print-calc-mode > *:not(#calc-modal) { display: none !important; }
+
+            body.print-calc-mode #calc-modal {
+                position: absolute !important; top: 0 !important; left: 0 !important;
+                display: block !important; opacity: 1 !important; transform: none !important;
+                background: white !important; width: 100% !important; padding: 0 !important; margin: 0 !important;
+                pointer-events: auto !important;
+            }
+            
+            body.print-calc-mode #calc-modal .modal-backdrop-print,
+            body.print-calc-mode #calc-modal .no-print-calc { display: none !important; }
+            
+            body.print-calc-mode #calc-modal .print-shadow-none { 
+                box-shadow: none !important; border: none !important; border-radius: 0 !important; 
+                max-height: none !important; height: auto !important; width: 100% !important; max-width: 100% !important; 
+            }
+
+            body.print-calc-mode .overflow-y-auto { overflow: visible !important; max-height: none !important; height: auto !important; }
+            .print\:block { display: block !important; }
+            .print\:flex { display: flex !important; }
+            .print\:hidden { display: none !important; }
+            .break-inside-avoid { page-break-inside: avoid !important; break-inside: avoid !important; }
+            
+            /* Additional print styles for dark card readability */
+            .print-dark-card { background: #f8fafc !important; color: #0f172a !important; border: 1px solid #e2e8f0 !important; }
+            .print-dark-card * { color: #0f172a !important; border-color: #cbd5e1 !important; }
+        }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden">
+
+    <!-- JSON-LD SEO Data -->
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"kalimaja.com | Solusi Penghemat Listrik AC Tanpa Dana di Muka","url":"https://kalimaja.com","telephone":"6285111033789","address":{"@type":"PostalAddress","streetAddress":"Jl dharma kencana blok A23, RT.3/RW.11, Duri Kosambi, Kota Jakarta Barat","addressLocality":"Jakarta Barat","postalCode":"11750","addressCountry":"ID"}}</script>
+
+    <!-- NAVIGATION -->
+    <nav class="fixed w-[calc(100%-2rem)] mx-4 mt-4 top-0 z-50 glass-nav shadow-lg shadow-slate-200/50 rounded-2xl transition-all duration-300">
+        <div class="px-5 py-3 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <a href="#home" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
+                    <img class="w-10 md:w-12 h-auto object-contain rounded-lg shadow-sm" src="https://ik.imagekit.io/pasukandigital/pasukan-digital-id/airtron-kalimaja/airtron_kalimaja_sewa-penghemat-ac_logo.webp?tr=w-300,q-70" alt="Kalimaja Logo" />
+                    <div class="hidden sm:flex flex-col leading-none">
+                    <span class="font-black text-slate-900 text-sm tracking-tight">PT KALIMAJA</span>
+                    <span class="text-[8px] font-bold text-indigo-600 tracking-[0.2em] uppercase">Surya Alam</span>
+                </div>
+            </a>
+        </div>
+        
+        <ul class="hidden lg:flex items-center space-x-1 text-[11px] font-bold uppercase tracking-widest text-slate-500">
+            <li><a href="#science" class="px-3 py-2 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition-all">Sains Termal</a></li>
+            <li><a href="#skema-rental" class="px-3 py-2 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition-all">Skema Rental</a></li>
+            <li><a href="#solusi" class="px-3 py-2 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition-all">Solusi</a></li>
+            <li><a href="#klien-kami" class="px-3 py-2 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition-all">Klien</a></li>
+            <li><a href="#esg" class="px-3 py-2 hover:text-emerald-600 hover:bg-emerald-50 rounded-lg transition-all"><i class="fas fa-leaf mr-1"></i> ESG</a></li>
+            <li><a href="#program-partner" class="px-3 py-2 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition-all">Partner</a></li>
+        </ul>
+
+        <div class="flex items-center gap-2">
+            <button onclick="openCalcModal()" class="hidden sm:flex items-center gap-2 bg-indigo-950 text-white px-4 py-2.5 rounded-xl text-[10px] font-bold uppercase tracking-widest shadow-lg shadow-indigo-900/30 hover:shadow-indigo-900/50 hover:-translate-y-0.5 transition-all border border-indigo-800">
+                <i class="fas fa-calculator"></i> Self Assessment
+            </button>
+            <a href="https://wa.me/6285111033789" target="_blank" class="hidden md:flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-4 py-2.5 rounded-xl text-xs font-bold shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 hover:-translate-y-0.5 transition-all">
+                <i class="fab fa-whatsapp"></i> Hubungi Kami
+            </a>
+            <button onclick="toggleMenu()" class="lg:hidden text-slate-900 text-xl p-2 focus:outline-none ml-1">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- MOBILE MENU TRAY -->
+    <div id="mobile-menu" class="absolute top-full left-0 w-full bg-white/95 backdrop-blur-xl border-b border-slate-200 p-6 flex flex-col gap-3 shadow-xl lg:hidden -z-10 rounded-b-2xl">
+            <a href="#science" onclick="toggleMenu()" class="block font-bold uppercase tracking-widest text-slate-600 hover:text-indigo-600 border-b border-slate-100 pb-2">Sains Termal</a>
+            <a href="#skema-rental" onclick="toggleMenu()" class="block font-bold uppercase tracking-widest text-slate-600 hover:text-indigo-600 border-b border-slate-100 pb-2">Skema Rental</a>
+            <a href="#solusi" onclick="toggleMenu()" class="block font-bold uppercase tracking-widest text-slate-600 hover:text-indigo-600 border-b border-slate-100 pb-2">Solusi Industri</a>
+            <a href="#klien-kami" onclick="toggleMenu()" class="block font-bold uppercase tracking-widest text-slate-600 hover:text-indigo-600 border-b border-slate-100 pb-2">Klien</a>
+            <a href="#esg" onclick="toggleMenu()" class="block font-bold uppercase tracking-widest text-emerald-600 hover:text-emerald-700 border-b border-slate-100 pb-2"><i class="fas fa-leaf mr-1"></i> ESG</a>
+            <a href="#program-partner" onclick="toggleMenu()" class="block font-bold uppercase tracking-widest text-slate-600 hover:text-indigo-600 border-b border-slate-100 pb-2">Partner & Investor</a>
+            <button onclick="openCalcModal(); toggleMenu();" class="mt-2 w-full flex justify-center items-center gap-2 bg-indigo-950 text-white px-5 py-3.5 rounded-xl text-xs font-bold uppercase tracking-widest shadow-lg shadow-indigo-900/30 border border-indigo-800">
+                <i class="fas fa-calculator"></i> Hitung Self Assessment
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="relative pt-32 pb-24 lg:pt-40 lg:pb-32 overflow-hidden bg-gradient-brand rounded-b-[2rem] lg:rounded-b-[3rem] text-white">
+        <div class="absolute inset-0 bg-[url('https://ik.imagekit.io/pasukandigital/pasukan-digital-id/airtron-kalimaja/airtron_kalimaja_sewa-penghemat-ac_banner-2-a.webp')] opacity-10 bg-cover bg-center mix-blend-overlay"></div>
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-gradient-to-b from-indigo-500/20 to-transparent blur-[120px]"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+            <div class="space-y-6 lg:space-y-8 text-center lg:text-left">
+                
+                <!-- BAGIAN BADGE DAN GAMBAR SCHEMATIC -->
+                <div class="flex flex-col items-center lg:items-start gap-4 lg:gap-6 w-full">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-[10px] sm:text-xs font-bold tracking-widest text-indigo-200 shrink-0">
+                        <span class="relative flex h-2.5 w-2.5">
+                          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                          <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
+                        </span>
+                        Zero CAPEX Solution
+                    </div>
+                    
+                    <!-- GAMBAR DIAGRAM SCHEMATIC SMART FALLBACK -->
+                    <div class="relative flex items-center justify-center bg-white rounded-2xl overflow-hidden shadow-2xl p-1.5 w-full max-w-[260px] sm:max-w-[340px] transition-all duration-300 hover:scale-105 hover:-translate-y-1">
+                        <!-- Tampil jika gambar ada (di komputer lokal) -->
+                        <img src="diagram.jpg" 
+                             alt="Installation Diagram" 
+                             class="w-full h-auto object-contain transition-all duration-300" 
+                             title="Airtron Schematic Diagram"
+                             onerror="this.style.display='none'; document.getElementById('fallback-diagram').style.display='flex';">
+                             
+                        <!-- Tampil cantik saat di Canvas / Gambar tidak ditemukan -->
+                        <div id="fallback-diagram" class="flex-col items-center justify-center text-slate-400 border-2 border-dashed border-slate-200 w-full aspect-[4/3] rounded-xl px-4 py-3 bg-slate-50" style="display: none;">
+                            <i class="fas fa-project-diagram text-2xl lg:text-3xl mb-2 text-indigo-300"></i>
+                            <span class="text-[9px] lg:text-[10px] font-bold uppercase tracking-widest text-center mt-1">Blueprint<br>Instalasi Airtron</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <h1 class="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-black tracking-tighter leading-[1.15]">
+                    Solusi Penghemat <br class="hidden sm:block"> <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-yellow-500">Listrik AC</span> Tanpa <br class="hidden sm:block"> Biaya Awal.
+                </h1>
+                
+                <p class="text-slate-300 text-sm sm:text-base lg:text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed font-medium">
+                    Kalimaja Airtron menyediakan solusi efisiensi energi berbasis skema rental. Anda tidak membeli alat, melainkan membayar dari hasil penghematan listrik yang terbukti nyata.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row items-center gap-3 lg:gap-4 justify-center lg:justify-start pt-2">
+                    <button onclick="openCalcModal()" class="w-full sm:w-auto bg-white text-indigo-950 px-6 lg:px-8 py-3.5 lg:py-4 rounded-xl font-black uppercase tracking-widest hover:bg-slate-100 transition-all shadow-xl shadow-white/10 hover:-translate-y-1 text-xs lg:text-sm">
+                        Self Assessment
+                    </button>
+                    <a href="#skema-rental" class="hidden sm:inline-flex w-full sm:w-auto bg-white/10 backdrop-blur-md border border-white/20 text-white px-6 lg:px-8 py-3.5 lg:py-4 rounded-xl font-bold uppercase tracking-widest hover:bg-white/20 transition-all hover:-translate-y-1 text-xs lg:text-sm">
+                        Pelajari Skema
+                    </a>
+                </div>
+            </div>
+            
+            <div class="relative mx-auto w-full max-w-sm lg:max-w-full group mt-6 lg:mt-0">
+                <div class="absolute inset-0 bg-gradient-to-tr from-indigo-500 to-purple-500 rounded-3xl blur-2xl opacity-40 group-hover:opacity-60 transition-opacity duration-500"></div>
+                <img src="https://ik.imagekit.io/pasukandigital/pasukan-digital-id/airtron-kalimaja/airtron_kalimaja_sewa-penghemat-ac_hero-3.webp?tr=w-800" alt="Kalimaja Airtron Unit" class="relative z-10 w-full h-auto rounded-3xl border border-white/10 shadow-2xl object-cover transform group-hover:scale-[1.02] transition-transform duration-500" />
+                
+                <!-- Floating Badges -->
+                <div class="absolute -left-4 lg:-left-6 top-6 lg:top-10 bg-white/90 backdrop-blur-md text-slate-900 p-3 lg:p-4 rounded-xl lg:rounded-2xl shadow-xl border border-slate-100 z-20 flex items-center gap-2 lg:gap-3 animate-[bounce_3s_infinite]">
+                    <div class="h-8 w-8 lg:h-10 lg:w-10 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-sm lg:text-lg"><i class="fas fa-bolt"></i></div>
+                    <div>
+                        <p class="text-[8px] lg:text-[10px] font-bold text-slate-400 uppercase tracking-widest">Hemat Listrik</p>
+                        <p class="font-black text-sm lg:text-base">Hingga 50%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS SECTION (OVERLAPPING HERO) -->
+    <div class="max-w-6xl mx-auto px-6 -mt-12 lg:-mt-16 relative z-20 mb-16 lg:mb-20">
+        <div class="glass-card shadow-2xl shadow-slate-200/50 rounded-2xl lg:rounded-3xl p-6 lg:p-8 grid grid-cols-1 md:grid-cols-3 gap-6 divide-y md:divide-y-0 md:divide-x divide-slate-100/50">
+            <div class="flex items-center gap-4 lg:gap-6 md:px-4 lg:px-6">
+                <div class="h-12 w-12 lg:h-14 lg:w-14 rounded-xl lg:rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-xl lg:text-2xl shrink-0"><i class="fas fa-award"></i></div>
+                <div>
+                    <h3 class="text-2xl lg:text-3xl font-black text-slate-900 leading-none mb-1">10+</h3>
+                    <p class="text-[10px] lg:text-xs font-bold text-slate-500 uppercase tracking-widest">Tahun Pengalaman</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-4 lg:gap-6 md:px-4 lg:px-6 pt-4 md:pt-0">
+                <div class="h-12 w-12 lg:h-14 lg:w-14 rounded-xl lg:rounded-2xl bg-green-50 text-green-600 flex items-center justify-center text-xl lg:text-2xl shrink-0"><i class="fas fa-users"></i></div>
+                <div>
+                    <h3 class="text-2xl lg:text-3xl font-black text-slate-900 leading-none mb-1">500+</h3>
+                    <p class="text-[10px] lg:text-xs font-bold text-slate-500 uppercase tracking-widest">Pelanggan Puas</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-4 lg:gap-6 md:px-4 lg:px-6 pt-4 md:pt-0">
+                <div class="h-12 w-12 lg:h-14 lg:w-14 rounded-xl lg:rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center text-xl lg:text-2xl shrink-0"><i class="fas fa-boxes"></i></div>
+                <div>
+                    <h3 class="text-2xl lg:text-3xl font-black text-slate-900 leading-none mb-1">100%</h3>
+                    <p class="text-[10px] lg:text-xs font-bold text-slate-500 uppercase tracking-widest">Guaranteed Result</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION: ANALISIS SAINS TERMAL -->
+    <section id="science" class="py-16 lg:py-20 px-6 bg-white scroll-mt-24">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end gap-6 lg:gap-10 mb-12 lg:mb-16 border-l-4 border-indigo-900 pl-4 lg:pl-6">
+                <div class="space-y-3">
+                    <h2 class="text-[9px] lg:text-[10px] font-black text-indigo-600 tracking-[0.4em] uppercase">Core Technology</h2>
+                    <h3 class="text-3xl lg:text-5xl font-black italic tracking-tighter uppercase leading-[1.1]">ANALISIS <span class="text-gradient">SAINS TERMAL</span></h3>
+                </div>
+                <p class="text-slate-500 max-w-lg font-medium italic text-sm md:text-base">
+                    Memahami bagaimana teknologi Kalimaja Airtron mengubah pemborosan energi menjadi penghematan kas operasional tanpa mengurangi kenyamanan.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+                <div class="space-y-6 lg:space-y-8">
+                    <!-- Inefisiensi -->
+                    <div class="flex gap-4 lg:gap-6 items-start">
+                        <div class="shrink-0 h-14 w-14 lg:h-16 lg:w-16 bg-red-50 text-red-600 rounded-xl lg:rounded-2xl flex items-center justify-center text-xl lg:text-2xl shadow-sm border border-red-100">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <div class="space-y-1 lg:space-y-2 mt-1">
+                            <h4 class="text-lg lg:text-xl font-black italic uppercase text-slate-900">Inefisiensi Konvensional</h4>
+                            <p class="text-slate-600 text-xs lg:text-sm leading-relaxed font-medium">
+                                AC standar memaksa kompresor tetap bekerja meskipun koil pipa sudah mencapai titik jenuh termal. Hal ini menyebabkan penggunaan daya yang sia-sia tanpa adanya penurunan suhu yang berarti di dalam ruangan.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Latent Cold -->
+                    <div class="flex gap-4 lg:gap-6 items-start">
+                        <div class="shrink-0 h-14 w-14 lg:h-16 lg:w-16 bg-indigo-50 text-indigo-600 rounded-xl lg:rounded-2xl flex items-center justify-center text-xl lg:text-2xl shadow-sm border border-indigo-100">
+                            <i class="fas fa-snowflake"></i>
+                        </div>
+                        <div class="space-y-1 lg:space-y-2 mt-1">
+                            <h4 class="text-lg lg:text-xl font-black italic uppercase text-slate-900">Latent Cold Recovery</h4>
+                            <p class="text-slate-600 text-xs lg:text-sm leading-relaxed font-medium">
+                                Teknologi mikroprosesor kami memantau kejenuhan termal pipa secara presisi. Begitu tercapai, sistem menghentikan kompresor namun tetap menjaga kipas menyala untuk menyalurkan "sisa dingin" (Latent Cold) yang sangat kuat.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Spec Breakdown Card -->
+                <div class="bg-slate-50 rounded-3xl lg:rounded-[40px] p-8 lg:p-12 border border-slate-200 shadow-xl shadow-slate-200/50 hover:shadow-indigo-500/10 transition-shadow duration-500">
+                    <div class="space-y-6 lg:space-y-8">
+                        <div class="flex items-center gap-3 lg:gap-4 border-b border-slate-200 pb-3 lg:pb-4">
+                            <i class="fas fa-microchip text-indigo-600 text-xl lg:text-2xl"></i>
+                            <h5 class="text-xs lg:text-sm font-black uppercase text-slate-900 tracking-widest">Technical Spec Breakdown</h5>
+                        </div>
+                        <ul class="space-y-4 lg:space-y-6">
+                            <li class="flex flex-col sm:flex-row justify-between sm:items-center text-xs lg:text-sm gap-2">
+                                <span class="text-slate-500 font-medium">Microprocessor</span> 
+                                <span class="font-black text-indigo-950 bg-white px-3 lg:px-4 py-1.5 lg:py-2 rounded-lg border border-slate-100 shadow-sm inline-block w-fit">8-Bit High Speed</span>
+                            </li>
+                            <li class="flex flex-col sm:flex-row justify-between sm:items-center text-xs lg:text-sm gap-2">
+                                <span class="text-slate-500 font-medium">Akurasi Sensor</span> 
+                                <span class="font-black text-indigo-950 bg-white px-3 lg:px-4 py-1.5 lg:py-2 rounded-lg border border-slate-100 shadow-sm inline-block w-fit">Dual NTC (&plusmn;0.1&deg;C)</span>
+                            </li>
+                            <li class="flex flex-col sm:flex-row justify-between sm:items-center text-xs lg:text-sm gap-2">
+                                <span class="text-slate-500 font-medium">Power Draw</span> 
+                                <span class="font-black text-indigo-950 bg-white px-3 lg:px-4 py-1.5 lg:py-2 rounded-lg border border-slate-100 shadow-sm inline-block w-fit">&lt; 1.5 Watt</span>
+                            </li>
+                            <li class="flex flex-col sm:flex-row justify-between sm:items-center text-xs lg:text-sm gap-2">
+                                <span class="text-slate-500 font-medium">Response Time</span> 
+                                <span class="font-black text-indigo-950 bg-white px-3 lg:px-4 py-1.5 lg:py-2 rounded-lg border border-slate-100 shadow-sm inline-block w-fit">Real-Time Sync</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKEMA RENTAL SECTION -->
+    <section id="skema-rental" class="py-16 lg:py-20 px-6 bg-white overflow-hidden scroll-mt-24 border-t border-slate-100">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-10 lg:gap-16 items-start">
+            <div class="w-full lg:w-1/3 lg:sticky lg:top-32 space-y-4 lg:space-y-6 text-center lg:text-left">
+                <span class="inline-block px-4 py-1.5 bg-blue-50 text-blue-600 font-bold text-[9px] lg:text-[10px] uppercase tracking-[0.2em] rounded-full">Cara Kerja</span>
+                <h2 class="text-3xl lg:text-5xl font-black tracking-tighter text-slate-900 leading-[1.1]">
+                    SKEMA <span class="text-gradient">KALIMAJA</span>
+                </h2>
+                <div class="h-1 w-12 lg:w-16 bg-indigo-600 rounded-full mx-auto lg:mx-0"></div>
+                <p class="text-slate-600 text-sm lg:text-base leading-relaxed font-medium">
+                    Aman, transparan, dan langsung memberikan keuntungan sejak bulan pertama. Anda hanya membayar dari selisih penghematan yang nyata terjadi.
+                </p>
+            </div>
+            
+            <div class="w-full lg:w-2/3 grid gap-4 lg:gap-6">
+                <!-- Step Cards -->
+                <div class="bg-slate-50 rounded-2xl lg:rounded-3xl p-6 lg:p-8 border border-slate-100 hover:border-indigo-200 transition-colors group flex gap-4 lg:gap-6 items-start">
+                    <div class="text-4xl lg:text-5xl font-black text-slate-200 group-hover:text-indigo-100 transition-colors">01</div>
+                    <div class="space-y-1.5 lg:space-y-2 mt-1 lg:mt-2">
+                        <h3 class="text-lg lg:text-xl font-bold text-slate-900">Survey & Audit Gratis</h3>
+                        <p class="text-slate-600 text-xs lg:text-sm leading-relaxed">Kami memulai dengan survey untuk memahami kondisi lokasi Anda: jumlah unit AC, daya PK, jam operasional, hingga tagihan listrik terakhir.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-slate-50 rounded-2xl lg:rounded-3xl p-6 lg:p-8 border border-slate-100 hover:border-indigo-200 transition-colors group flex gap-4 lg:gap-6 items-start">
+                    <div class="text-4xl lg:text-5xl font-black text-slate-200 group-hover:text-indigo-100 transition-colors">02</div>
+                    <div class="space-y-1.5 lg:space-y-2 mt-1 lg:mt-2">
+                        <h3 class="text-lg lg:text-xl font-bold text-slate-900">Simulasi Penghematan</h3>
+                        <p class="text-slate-600 text-xs lg:text-sm leading-relaxed">Berdasarkan hasil audit, kami menyusun simulasi penghematan (persentase & rupiah) sehingga Anda melihat potensi pengurangan biaya secara realistis.</p>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 rounded-2xl lg:rounded-3xl p-6 lg:p-8 border border-slate-100 hover:border-indigo-200 transition-colors group flex gap-4 lg:gap-6 items-start">
+                    <div class="text-4xl lg:text-5xl font-black text-slate-200 group-hover:text-indigo-100 transition-colors">03</div>
+                    <div class="space-y-1.5 lg:space-y-2 mt-1 lg:mt-2">
+                        <h3 class="text-lg lg:text-xl font-bold text-slate-900">Kesepakatan Bagi Hasil</h3>
+                        <p class="text-slate-600 text-xs lg:text-sm leading-relaxed">Menyepakati skema bagi hasil, misalnya 30% untuk klien dan 70% untuk rental di tahun pertama, dengan porsi yang semakin menguntungkan klien di tahun berikutnya.</p>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 rounded-2xl lg:rounded-3xl p-6 lg:p-8 border border-slate-100 hover:border-indigo-200 transition-colors group flex gap-4 lg:gap-6 items-start">
+                    <div class="text-4xl lg:text-5xl font-black text-slate-200 group-hover:text-indigo-100 transition-colors">04</div>
+                    <div class="space-y-1.5 lg:space-y-2 mt-1 lg:mt-2">
+                        <h3 class="text-lg lg:text-xl font-bold text-slate-900">Instalasi Tanpa Biaya</h3>
+                        <p class="text-slate-600 text-xs lg:text-sm leading-relaxed">Tim Kalimaja melakukan instalasi tanpa mengubah sistem AC yang ada, tanpa mengganggu operasional, dan murni 100% tanpa biaya instalasi (Zero CAPEX).</p>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 rounded-2xl lg:rounded-3xl p-6 lg:p-8 border border-slate-100 hover:border-indigo-200 transition-colors group flex gap-4 lg:gap-6 items-start">
+                    <div class="text-4xl lg:text-5xl font-black text-slate-200 group-hover:text-indigo-100 transition-colors">05</div>
+                    <div class="space-y-1.5 lg:space-y-2 mt-1 lg:mt-2">
+                        <h3 class="text-lg lg:text-xl font-bold text-slate-900">Masa Rental & Evaluasi</h3>
+                        <p class="text-slate-600 text-xs lg:text-sm leading-relaxed">Solusi berjalan selama 12-36 bulan. Kami memonitor performa berkala dengan prinsip utama: <span class="font-bold text-indigo-600">Jika tidak ada penghematan, Anda tidak bayar.</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STUDI KASUS (POTENSI) SECTION -->
+    <section id="studi-kasus" class="py-16 lg:py-20 px-6 bg-slate-50 border-y border-slate-100 scroll-mt-24">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-10 lg:gap-16 items-center">
+            <div class="w-full lg:w-1/3 space-y-4 lg:space-y-6 text-center lg:text-left order-1 lg:order-2">
+                <span class="inline-block px-4 py-1.5 bg-amber-50 text-amber-600 font-bold text-[9px] lg:text-[10px] uppercase tracking-[0.2em] rounded-full">Analisis Potensi</span>
+                <h2 class="text-3xl lg:text-5xl font-black tracking-tighter text-slate-900 leading-[1.1]">
+                    BERAPA <span class="text-gradient">ANGKANYA?</span>
+                </h2>
+                <div class="h-1 w-12 lg:w-16 bg-amber-500 rounded-full mx-auto lg:mx-0"></div>
+                <p class="text-slate-600 text-sm lg:text-base leading-relaxed font-medium">
+                    Penghematan sangat bergantung pada kondisi operasional. Berikut gambaran realistis berdasarkan implementasi kami di berbagai sektor.
+                </p>
+            </div>
+
+            <div class="w-full lg:w-2/3 grid gap-4 lg:gap-6 order-2 lg:order-1">
+                <div class="bg-white rounded-2xl lg:rounded-3xl p-6 lg:p-8 shadow-lg shadow-slate-200/40 border border-slate-100 flex flex-col sm:flex-row items-start sm:items-center gap-4 lg:gap-6 hover:-translate-y-1 transition-transform duration-300">
+                    <div class="h-14 w-14 lg:h-16 lg:w-16 bg-green-50 text-green-600 rounded-xl lg:rounded-2xl flex items-center justify-center text-xl lg:text-2xl font-black shrink-0">50%</div>
+                    <div>
+                        <h3 class="text-base lg:text-lg font-bold text-slate-900 mb-1">Operasional Intensif (Mendekati 50%)</h3>
+                        <p class="text-slate-500 text-xs lg:text-sm leading-relaxed">Jika AC beroperasi 18–24 jam per hari, jumlah unit banyak (hotel/RS), serta menggunakan AC non-inverter lama.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl lg:rounded-3xl p-6 lg:p-8 shadow-lg shadow-slate-200/40 border border-slate-100 flex flex-col sm:flex-row items-start sm:items-center gap-4 lg:gap-6 hover:-translate-y-1 transition-transform duration-300 transform lg:translate-x-6">
+                    <div class="h-14 w-14 lg:h-16 lg:w-16 bg-blue-50 text-blue-600 rounded-xl lg:rounded-2xl flex items-center justify-center text-xl lg:text-2xl font-black shrink-0">40%</div>
+                    <div>
+                        <h3 class="text-base lg:text-lg font-bold text-slate-900 mb-1">Operasional Standar (30–40%)</h3>
+                        <p class="text-slate-500 text-xs lg:text-sm leading-relaxed">Penghematan paling umum pada perkantoran (8-10 jam/hari), serta bisnis retail dan restoran dengan pola reguler.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl lg:rounded-3xl p-6 lg:p-8 shadow-lg shadow-slate-200/40 border border-slate-100 flex flex-col sm:flex-row items-start sm:items-center gap-4 lg:gap-6 hover:-translate-y-1 transition-transform duration-300 transform lg:translate-x-12">
+                    <div class="h-14 w-14 lg:h-16 lg:w-16 bg-slate-100 text-slate-500 rounded-xl lg:rounded-2xl flex items-center justify-center text-lg lg:text-xl font-black shrink-0">&lt;30%</div>
+                    <div>
+                        <h3 class="text-base lg:text-lg font-bold text-slate-900 mb-1">Sistem Sudah Efisien (Di Bawah 30%)</h3>
+                        <p class="text-slate-500 text-xs lg:text-sm leading-relaxed">Jika menggunakan inverter terbaru, jam nyala pendek, atau gedung sudah memiliki sistem efisiensi tersendiri.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOLUSI INDUSTRI SECTION -->
+    <section id="solusi" class="py-16 lg:py-20 bg-white scroll-mt-24 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 mb-8 lg:mb-12 flex flex-col md:flex-row justify-between items-end gap-4 lg:gap-6">
+            <div class="space-y-3 lg:space-y-4 max-w-2xl">
+                <span class="inline-block px-4 py-1.5 bg-indigo-50 text-indigo-600 font-bold text-[9px] lg:text-[10px] uppercase tracking-[0.2em] rounded-full">Sektor Layanan</span>
+                <h2 class="text-3xl lg:text-5xl font-black tracking-tighter text-slate-900">SOLUSI <span class="text-gradient">UNGGULAN</span></h2>
+                <p class="text-slate-600 text-sm lg:text-base font-medium">Solusi penghematan listrik AC spesifik untuk berbagai industri dengan tingkat efisiensi maksimal.</p>
+            </div>
+            <div class="hidden md:flex gap-2">
+                <button onclick="document.getElementById('solusi-slider').scrollBy({left: -320, behavior: 'smooth'})" class="h-10 w-10 lg:h-12 lg:w-12 rounded-full bg-slate-100 text-slate-400 hover:bg-indigo-600 hover:text-white transition-colors flex items-center justify-center shadow-sm"><i class="fas fa-chevron-left"></i></button>
+                <button onclick="document.getElementById('solusi-slider').scrollBy({left: 320, behavior: 'smooth'})" class="h-10 w-10 lg:h-12 lg:w-12 rounded-full bg-slate-100 text-slate-400 hover:bg-indigo-600 hover:text-white transition-colors flex items-center justify-center shadow-sm"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+
+        <div id="solusi-slider" class="flex overflow-x-auto snap-x snap-mandatory gap-4 lg:gap-6 pb-12 px-6 lg:px-8 no-scrollbar scroll-smooth">
+            <!-- Card 1 -->
+            <div class="snap-center shrink-0 w-[280px] sm:w-[300px] lg:w-[350px] bg-white border border-slate-100 rounded-2xl lg:rounded-3xl shadow-xl shadow-slate-200/30 overflow-hidden hover:-translate-y-2 transition-transform duration-300 group">
+                <div class="relative h-40 lg:h-48 overflow-hidden">
+                    <img src="https://ik.imagekit.io/pasukandigital/pasukan-digital-id/airtron-kalimaja/airtron_kalimaja_sewa-penghemat-ac_perusahaan.webp" alt="Perkantoran" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute top-3 left-3 lg:top-4 lg:left-4 bg-black/60 backdrop-blur-sm text-white text-[10px] lg:text-xs font-bold px-3 py-1.5 rounded-full flex items-center gap-2"><i class="fas fa-building"></i> Perkantoran</div>
+                    <div class="absolute top-3 right-3 lg:top-4 lg:right-4 bg-green-500 text-white text-[10px] lg:text-xs font-black px-3 py-1.5 rounded-full shadow-lg">30–40%</div>
+                </div>
+                <div class="p-5 lg:p-6 space-y-3 lg:space-y-4">
+                    <h3 class="font-bold text-base lg:text-lg leading-snug">Solusi Gedung Perkantoran & Coworking</h3>
+                    <div class="space-y-1.5 lg:space-y-2 text-xs lg:text-sm text-slate-600">
+                        <p class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Tanpa Dana Awal</p>
+                        <p class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Kontrak 12/24/36 Bln</p>
+                        <p class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Hemat hingga 40%</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="snap-center shrink-0 w-[280px] sm:w-[300px] lg:w-[350px] bg-white border border-slate-100 rounded-2xl lg:rounded-3xl shadow-xl shadow-slate-200/30 overflow-hidden hover:-translate-y-2 transition-transform duration-300 group">
+                <div class="relative h-40 lg:h-48 overflow-hidden">
+                    <img src="https://ik.imagekit.io/pasukandigital/pasukan-digital-id/airtron-kalimaja/airtron_kalimaja_sewa-penghemat-ac_hotel.webp" alt="Hotel" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute top-3 left-3 lg:top-4 lg:left-4 bg-black/60 backdrop-blur-sm text-white text-[10px] lg:text-xs font-bold px-3 py-1.5 rounded-full flex items-center gap-2"><i class="fas fa-hotel"></i> Hotel & Apartemen</div>
+                    <div class="absolute top-3 right-3 lg:top-4 lg:right-4 bg-green-500 text-white text-[10px] lg:text-xs font-black px-3 py-1.5 rounded-full shadow-lg">40–50%</div>
+                </div>
+                <div class="p-5 lg:p-6 space-y-3 lg:space-y-4">
+                    <h3 class="font-bold text-base lg:text-lg leading-snug">Solusi Fasilitas Penginapan 24 Jam</h3>
+                    <div class="space-y-1.5 lg:space-y-2 text-xs lg:text-sm text-slate-600">
+                        <p class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Suhu Tetap Nyaman</p>
+                        <p class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Kontrak Fleksibel</p>
+                        <p class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Skema Zero CAPEX</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="snap-center shrink-0 w-[280px] sm:w-[300px] lg:w-[350px] bg-white border border-slate-100 rounded-2xl lg:rounded-3xl shadow-xl shadow-slate-200/30 overflow-hidden hover:-translate-y-2 transition-transform duration-300 group">
+                <div class="relative h-40 lg:h-48 overflow-hidden">
+                    <img src="https://ik.imagekit.io/pasukandigital/pasukan-digital-id/airtron-kalimaja/airtron_kalimaja_sewa-penghemat-ac_rumah-sakit.webp" alt="Rumah Sakit" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute top-3 left-3 lg:top-4 lg:left-4 bg-black/60 backdrop-blur-sm text-white text-[10px] lg:text-xs font-bold px-3 py-1.5 rounded-full flex items-center gap-2"><i class="fas fa-hospital"></i> Fasilitas Medis</div>
+                    <div class="absolute top-3 right-3 lg:top-4 lg:right-4 bg-green-500 text-white text-[10px] lg:text-xs font-black px-3 py-1.5 rounded-full shadow-lg">35–45%</div>
+                </div>
+                <div class="p-5 lg:p-6 space-y-3 lg:space-y-4">
+                    <h3 class="font-bold text-base lg:text-lg leading-snug">Solusi Rumah Sakit & Klinik Kesehatan</h3>
+                    <div class="space-y-1.5 lg:space-y-2 text-xs lg:text-sm text-slate-600">
+                        <p class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Aman untuk Alat Medis</p>
+                        <p class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Bebas Biaya Awal</p>
+                        <p class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Monitoring Rutin</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="snap-center shrink-0 w-[280px] sm:w-[300px] lg:w-[350px] bg-white border border-slate-100 rounded-2xl lg:rounded-3xl shadow-xl shadow-slate-200/30 overflow-hidden hover:-translate-y-2 transition-transform duration-300 group">
+                <div class="relative h-40 lg:h-48 overflow-hidden">
+                    <img src="https://ik.imagekit.io/pasukandigital/pasukan-digital-id/airtron-kalimaja/airtron_kalimaja_sewa-penghemat-ac_restaurant.webp" alt="Retail" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute top-3 left-3 lg:top-4 lg:left-4 bg-black/60 backdrop-blur-sm text-white text-[10px] lg:text-xs font-bold px-3 py-1.5 rounded-full flex items-center gap-2"><i class="fas fa-store"></i> Retail & F&B</div>
+                    <div class="absolute top-3 right-3 lg:top-4 lg:right-4 bg-green-500 text-white text-[10px] lg:text-xs font-black px-3 py-1.5 rounded-full shadow-lg">30–40%</div>
+                </div>
+                <div class="p-5 lg:p-6 space-y-3 lg:space-y-4">
+                    <h3 class="font-bold text-base lg:text-lg leading-snug">Solusi Franchise, Restoran & Minimarket</h3>
+                    <div class="space-y-1.5 lg:space-y-2 text-xs lg:text-sm text-slate-600">
+                        <p class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> ROI Maksimal per Cabang</p>
+                        <p class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Instalasi Sangat Cepat</p>
+                        <p class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Multi-Unit Support</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="snap-center shrink-0 w-[280px] sm:w-[300px] lg:w-[350px] bg-white border border-slate-100 rounded-2xl lg:rounded-3xl shadow-xl shadow-slate-200/30 overflow-hidden hover:-translate-y-2 transition-transform duration-300 group">
+                <div class="relative h-40 lg:h-48 overflow-hidden">
+                    <img src="https://ik.imagekit.io/pasukandigital/pasukan-digital-id/airtron-kalimaja/airtron_kalimaja_sewa-penghemat-ac_universitas.webp" alt="Sekolah & Kampus" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute top-3 left-3 lg:top-4 lg:left-4 bg-black/60 backdrop-blur-sm text-white text-[10px] lg:text-xs font-bold px-3 py-1.5 rounded-full flex items-center gap-2"><i class="fas fa-graduation-cap"></i> Pendidikan</div>
+                    <div class="absolute top-3 right-3 lg:top-4 lg:right-4 bg-green-500 text-white text-[10px] lg:text-xs font-black px-3 py-1.5 rounded-full shadow-lg">30–40%</div>
+                </div>
+                <div class="p-5 lg:p-6 space-y-3 lg:space-y-4">
+                    <h3 class="font-bold text-base lg:text-lg leading-snug">Solusi Sekolah & Universitas</h3>
+                    <div class="space-y-1.5 lg:space-y-2 text-xs lg:text-sm text-slate-600">
+                        <p class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Cocok Banyak Unit</p>
+                        <p class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Skema Rental Tanpa DP</p>
+                        <p class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Dukung Green Campus</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="snap-center shrink-0 w-[280px] sm:w-[300px] lg:w-[350px] bg-white border border-slate-100 rounded-2xl lg:rounded-3xl shadow-xl shadow-slate-200/30 overflow-hidden hover:-translate-y-2 transition-transform duration-300 group">
+                <div class="relative h-40 lg:h-48 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop" alt="Pabrik & Industri" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute top-3 left-3 lg:top-4 lg:left-4 bg-black/60 backdrop-blur-sm text-white text-[10px] lg:text-xs font-bold px-3 py-1.5 rounded-full flex items-center gap-2"><i class="fas fa-industry"></i> Pabrik & Industri</div>
+                    <div class="absolute top-3 right-3 lg:top-4 lg:right-4 bg-green-500 text-white text-[10px] lg:text-xs font-black px-3 py-1.5 rounded-full shadow-lg">35–50%</div>
+                </div>
+                <div class="p-5 lg:p-6 space-y-3 lg:space-y-4">
+                    <h3 class="font-bold text-base lg:text-lg leading-snug">Solusi Pabrik, Gudang & Manufaktur</h3>
+                    <div class="space-y-1.5 lg:space-y-2 text-xs lg:text-sm text-slate-600">
+                        <p class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Kapasitas Pendingin Besar</p>
+                        <p class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Tahan Beban Operasional</p>
+                        <p class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Efisiensi Skala Makro</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="klien-kami" class="py-16 lg:py-20 bg-slate-50 border-t border-slate-100 scroll-mt-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-10 lg:mb-14 space-y-3 lg:space-y-4">
+                <span class="inline-block px-4 py-1.5 bg-indigo-100 text-indigo-700 font-bold text-[9px] lg:text-[10px] uppercase tracking-[0.2em] rounded-full">Testimonials</span>
+                <h2 class="text-3xl lg:text-5xl font-black tracking-tighter text-slate-900">KEPUASAN <span class="text-gradient">KLIEN KAMI</span></h2>
+                <p class="text-slate-600 text-sm lg:text-base max-w-2xl mx-auto font-medium">Berasal dari pengalaman nyata berbagai sektor industri yang telah membuktikan solusi Kalimaja Airtron.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Testi 1 -->
+                <div class="bg-white p-6 lg:p-8 rounded-2xl lg:rounded-3xl border border-slate-100 shadow-lg shadow-slate-200/40 space-y-4 lg:space-y-6">
+                    <div class="flex gap-1 text-yellow-400 text-xs lg:text-sm">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-slate-700 text-sm lg:text-base leading-relaxed font-medium">"Setelah menggunakan Kalimaja Airtron, tagihan listrik AC kami turun signifikan tanpa mengubah kenyamanan kerja. Skema tanpa biaya awal sangat membantu cashflow."</p>
+                    <div class="flex items-center gap-4 pt-4 border-t border-slate-50">
+                        <div class="h-10 w-10 lg:h-12 lg:w-12 bg-indigo-50 text-indigo-600 rounded-full flex items-center justify-center font-black text-sm lg:text-base">AN</div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-xs lg:text-sm">Arief Nugroho</h4>
+                            <p class="text-[10px] lg:text-xs text-slate-500">Facility Manager Perkantoran</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testi 2 -->
+                <div class="bg-white p-6 lg:p-8 rounded-2xl lg:rounded-3xl border border-slate-100 shadow-lg shadow-slate-200/40 space-y-4 lg:space-y-6">
+                    <div class="flex gap-1 text-yellow-400 text-xs lg:text-sm">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="text-slate-700 text-sm lg:text-base leading-relaxed font-medium">"AC hotel kami beroperasi hampir 24 jam. Solusi dari Kalimaja Airtron terbukti menghemat listrik tanpa keluhan dari tamu. Proses instalasi sangat profesional."</p>
+                    <div class="flex items-center gap-4 pt-4 border-t border-slate-50">
+                        <div class="h-10 w-10 lg:h-12 lg:w-12 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center font-black text-sm lg:text-base">MP</div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-xs lg:text-sm">Maya Putri</h4>
+                            <p class="text-[10px] lg:text-xs text-slate-500">Operation Manager Hotel</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testi 3 -->
+                <div class="bg-white p-6 lg:p-8 rounded-2xl lg:rounded-3xl border border-slate-100 shadow-lg shadow-slate-200/40 space-y-4 lg:space-y-6">
+                    <div class="flex gap-1 text-yellow-400 text-xs lg:text-sm">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-slate-700 text-sm lg:text-base leading-relaxed font-medium">"Untuk bisnis dengan banyak cabang, solusi Kalimaja sangat efektif. Instalasi cepat, tidak mengganggu operasional toko, dan penghematan terasa sejak bulan pertama."</p>
+                    <div class="flex items-center gap-4 pt-4 border-t border-slate-50">
+                        <div class="h-10 w-10 lg:h-12 lg:w-12 bg-amber-50 text-amber-600 rounded-full flex items-center justify-center font-black text-sm lg:text-base">DP</div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-xs lg:text-sm">Dimas Pratama</h4>
+                            <p class="text-[10px] lg:text-xs text-slate-500">Owner Retail & Franchise</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION ESG (ENVIRONMENTAL, SOCIAL, GOVERNANCE) -->
+    <section id="esg" class="py-16 lg:py-20 bg-slate-950 text-white scroll-mt-24 relative overflow-hidden">
+        <!-- Background Effects -->
+        <div class="absolute inset-0 bg-gradient-to-br from-indigo-900/20 to-slate-900 pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-10 lg:mb-14 space-y-3 lg:space-y-4">
+                <span class="inline-flex items-center gap-2 px-4 py-1.5 bg-emerald-500/10 text-emerald-400 font-bold text-[9px] lg:text-[10px] uppercase tracking-[0.2em] rounded-full border border-emerald-500/20">
+                    <i class="fas fa-leaf"></i> Komitmen Keberlanjutan
+                </span>
+                <h2 class="text-3xl lg:text-5xl font-black tracking-tighter text-white">NILAI <span class="text-emerald-400">ESG KAMI</span></h2>
+                <p class="text-slate-400 text-sm lg:text-base max-w-2xl mx-auto font-medium">Kalimaja Airtron tidak hanya memberikan efisiensi biaya, tetapi juga berkontribusi pada masa depan yang lebih hijau dan berkelanjutan.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
+                <!-- Environmental -->
+                <div class="bg-white/5 border border-white/10 p-6 lg:p-8 rounded-2xl lg:rounded-3xl backdrop-blur-sm hover:bg-white/10 transition-colors">
+                    <div class="h-12 w-12 lg:h-14 lg:w-14 bg-emerald-500/20 text-emerald-400 rounded-xl lg:rounded-2xl flex items-center justify-center text-xl lg:text-2xl mb-4 lg:mb-6"><i class="fas fa-globe-asia"></i></div>
+                    <h3 class="text-lg lg:text-xl font-bold text-white mb-2 lg:mb-3">Environmental (Lingkungan)</h3>
+                    <p class="text-slate-400 text-xs lg:text-sm leading-relaxed">Mendukung terwujudnya Net Zero Emission dengan mereduksi jejak karbon secara masif melalui efisiensi konsumsi listrik AC yang signifikan.</p>
+                </div>
+
+                <!-- Social -->
+                <div class="bg-white/5 border border-white/10 p-6 lg:p-8 rounded-2xl lg:rounded-3xl backdrop-blur-sm hover:bg-white/10 transition-colors">
+                    <div class="h-12 w-12 lg:h-14 lg:w-14 bg-blue-500/20 text-blue-400 rounded-xl lg:rounded-2xl flex items-center justify-center text-xl lg:text-2xl mb-4 lg:mb-6"><i class="fas fa-users"></i></div>
+                    <h3 class="text-lg lg:text-xl font-bold text-white mb-2 lg:mb-3">Social (Sosial)</h3>
+                    <p class="text-slate-400 text-xs lg:text-sm leading-relaxed">Memastikan kenyamanan udara optimal bagi produktivitas staf & pelanggan Anda, serta memberdayakan teknisi lokal melalui program kemitraan kami.</p>
+                </div>
+
+                <!-- Governance -->
+                <div class="bg-white/5 border border-white/10 p-6 lg:p-8 rounded-2xl lg:rounded-3xl backdrop-blur-sm hover:bg-white/10 transition-colors">
+                    <div class="h-12 w-12 lg:h-14 lg:w-14 bg-amber-500/20 text-amber-400 rounded-xl lg:rounded-2xl flex items-center justify-center text-xl lg:text-2xl mb-4 lg:mb-6"><i class="fas fa-balance-scale"></i></div>
+                    <h3 class="text-lg lg:text-xl font-bold text-white mb-2 lg:mb-3">Governance (Tata Kelola)</h3>
+                    <p class="text-slate-400 text-xs lg:text-sm leading-relaxed">Menerapkan skema bagi hasil yang 100% transparan, dapat diaudit secara riil, dan murni tanpa biaya di muka (Zero CAPEX) untuk integritas bisnis jangka panjang.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION KEMITRAAN & INVESTASI -->
+    <section id="program-partner" class="py-16 lg:py-20 bg-white scroll-mt-24">
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-8 lg:gap-16">
+            <!-- Penjualan / Partner -->
+            <div class="bg-indigo-50 border border-indigo-100 rounded-3xl lg:rounded-[2.5rem] p-8 lg:p-12 text-center flex flex-col items-center justify-center space-y-4 lg:space-y-6 hover:shadow-2xl hover:shadow-indigo-500/20 transition-all duration-500">
+                <div class="h-16 w-16 lg:h-20 lg:w-20 bg-white text-indigo-600 rounded-2xl flex items-center justify-center text-2xl lg:text-3xl shadow-sm"><i class="fas fa-bullhorn"></i></div>
+                <h3 class="text-2xl lg:text-3xl font-black text-slate-900 tracking-tight">Kemitraan Sales</h3>
+                <p class="text-slate-600 text-sm lg:text-base font-medium">Jadilah bagian dari tim penjualan Kalimaja Airtron. Nikmati komisi menarik, produk unik dengan model Zero CAPEX yang sangat mudah dijual, dan potensi recurring income.</p>
+                <a href="https://wa.me/6285111033789?text=Halo,%20saya%20tertarik%20bergabung%20sebagai%20Sales%20Executive%20Kalimaja%20Airtron" target="_blank" class="mt-2 lg:mt-4 bg-indigo-600 text-white px-6 lg:px-8 py-3.5 lg:py-4 rounded-xl font-bold uppercase tracking-widest text-[10px] lg:text-xs hover:bg-indigo-800 transition-colors shadow-lg shadow-indigo-500/30">Daftar Partner</a>
+            </div>
+
+            <!-- Investor -->
+            <div id="investor" class="bg-slate-900 text-white rounded-3xl lg:rounded-[2.5rem] p-8 lg:p-12 text-center flex flex-col items-center justify-center space-y-4 lg:space-y-6 shadow-2xl hover:-translate-y-2 transition-transform duration-500 relative overflow-hidden">
+                <div class="absolute -right-10 -top-10 opacity-10"><i class="fas fa-chart-pie text-[150px] lg:text-[200px]"></i></div>
+                <div class="relative z-10 h-16 w-16 lg:h-20 lg:w-20 bg-white/10 backdrop-blur-md border border-white/20 text-amber-400 rounded-2xl flex items-center justify-center text-2xl lg:text-3xl"><i class="fas fa-chart-line"></i></div>
+                <h3 class="text-2xl lg:text-3xl font-black text-white tracking-tight relative z-10">Peluang Investasi</h3>
+                <p class="text-slate-400 text-sm lg:text-base font-medium relative z-10">Dukung pengadaan unit untuk perluasan proyek efisiensi energi. Sektor yang selalu dibutuhkan (listrik), tren harga yang terus naik, dan jaminan sistem bagi hasil yang stabil.</p>
+                <a href="https://wa.me/6285111033789?text=Halo,%20saya%20ingin%20menjadwalkan%20presentasi%20bisnis%20(Investor)%20Kalimaja%20Airtron" target="_blank" class="mt-2 lg:mt-4 bg-amber-500 text-slate-900 px-6 lg:px-8 py-3.5 lg:py-4 rounded-xl font-black uppercase tracking-widest text-[10px] lg:text-xs hover:bg-amber-400 transition-colors shadow-lg shadow-amber-500/20 relative z-10">Jadwalkan Presentasi</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact" class="bg-slate-950 pt-16 lg:pt-20 pb-10 w-full text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-t from-indigo-900/40 to-transparent pointer-events-none"></div>
+        <div class="mx-auto max-w-7xl px-6 relative z-10">
+            <div class="grid md:grid-cols-2 gap-10 lg:gap-12 mb-16 lg:mb-20 items-center border-b border-white/10 pb-16 lg:pb-20">
+                <div class="space-y-4 lg:space-y-6 text-center md:text-left">
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tighter leading-tight">Mulai Hemat Listrik <br><span class="text-amber-400">Tanpa Biaya Awal.</span></h2>
+                    <p class="text-slate-400 text-sm lg:text-base font-medium max-w-md mx-auto md:mx-0">Survey dan audit GRATIS. Instalasi tanpa biaya. Anda hanya membayar jika penghematan benar-benar terjadi pada tagihan Anda.</p>
+                </div>
+                <div class="flex flex-col gap-3 lg:gap-4 max-w-sm mx-auto md:ml-auto md:mr-0 w-full">
+                    <a href="https://wa.me/6285111033789?text=Halo%2C%20boleh%20diinfo%20airtron%20lebih%20detail%3F" target="_blank" class="flex items-center gap-4 p-4 lg:p-5 bg-white/5 hover:bg-white/10 border border-white/10 rounded-2xl transition-all group">
+                        <div class="h-10 w-10 lg:h-12 lg:w-12 bg-green-500/20 text-green-400 rounded-xl flex items-center justify-center text-lg lg:text-xl group-hover:scale-110 transition-transform"><i class="fab fa-whatsapp"></i></div>
+                        <div class="text-left">
+                            <p class="text-[9px] lg:text-[10px] font-bold uppercase tracking-widest text-slate-400">Konsultasi Cepat</p>
+                            <p class="font-bold text-base lg:text-lg">0851 1103 3789</p>
+                        </div>
+                    </a>
+                    <a href="mailto:kalimajasuryaalam@gmail.com" class="flex items-center gap-4 p-4 lg:p-5 bg-white/5 hover:bg-white/10 border border-white/10 rounded-2xl transition-all group">
+                        <div class="h-10 w-10 lg:h-12 lg:w-12 bg-blue-500/20 text-blue-400 rounded-xl flex items-center justify-center text-lg lg:text-xl group-hover:scale-110 transition-transform"><i class="fas fa-envelope"></i></div>
+                        <div class="text-left overflow-hidden">
+                            <p class="text-[9px] lg:text-[10px] font-bold uppercase tracking-widest text-slate-400">Email Resmi</p>
+                            <p class="font-bold text-xs lg:text-sm truncate">kalimajasuryaalam@gmail.com</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4 lg:gap-6 text-center text-[10px] lg:text-xs font-bold text-slate-500 uppercase tracking-widest">
+                <p>kalimaja.com &copy; 2026</p>
+                <p>PT KALIMAJA SURYA ALAM</p>
+                <p>Design Optimized by Canvas</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL: SELF ASSESSMENT -->
+    <div id="calc-modal" class="fixed inset-0 z-[100] flex items-center justify-center p-4 opacity-0 pointer-events-none transition-all duration-300">
+        <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm modal-backdrop-print" onclick="closeCalcModal()"></div>
+        <div class="bg-white w-full max-w-3xl rounded-2xl lg:rounded-[30px] shadow-2xl relative z-10 overflow-hidden max-h-[95vh] flex flex-col print-shadow-none">
+            
+            <!-- Modal Header (Sembunyi saat print) -->
+            <div class="p-4 lg:p-6 border-b border-slate-100 flex justify-between items-center bg-slate-50 no-print-calc">
+                <h3 class="text-lg lg:text-xl font-black italic uppercase tracking-tight text-indigo-950 flex items-center gap-2"><i class="fas fa-calculator text-indigo-600"></i> Self Assessment</h3>
+                <button onclick="closeCalcModal()" class="text-slate-400 hover:text-slate-900 h-8 w-8 rounded-full bg-white flex items-center justify-center shadow-sm border border-slate-200"><i class="fas fa-times"></i></button>
+            </div>
+
+            <!-- Scrollable Content -->
+            <div class="p-5 lg:p-8 overflow-y-auto space-y-4 lg:space-y-6 flex-1">
+                
+                <!-- SECTION 1: FORM INPUT (Sembunyi saat hasil keluar) -->
+                <div id="calc-input-section">
+                    <p class="text-xs lg:text-sm text-slate-500 font-medium italic mb-4 lg:mb-6">Lengkapi identitas dan konfigurasi AC untuk mendapatkan Laporan Estimasi Penghematan khusus bisnis Anda.</p>
+                    
+                    <!-- Business Identity -->
+                    <div class="space-y-3 lg:space-y-4 mb-6 lg:mb-8">
+                        <h4 class="text-[9px] lg:text-[10px] font-black text-indigo-600 uppercase tracking-widest border-b border-slate-100 pb-2"><i class="fas fa-building mr-1"></i> Identitas Bisnis</h4>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 lg:gap-4">
+                            <input type="text" id="calc-company" placeholder="Nama Perusahaan (PT/CV)" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 lg:py-3 text-xs lg:text-sm font-bold focus:border-indigo-500 outline-none">
+                            <input type="text" id="calc-pic" placeholder="Nama PIC" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 lg:py-3 text-xs lg:text-sm font-bold focus:border-indigo-500 outline-none">
+                            <input type="number" id="calc-wa" placeholder="No. WhatsApp" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 lg:py-3 text-xs lg:text-sm font-bold focus:border-indigo-500 outline-none">
+                            <input type="text" id="calc-address" placeholder="Kota / Alamat" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 lg:py-3 text-xs lg:text-sm font-bold focus:border-indigo-500 outline-none">
+                        </div>
+                    </div>
+
+                    <!-- Specs -->
+                    <h4 class="text-[9px] lg:text-[10px] font-black text-indigo-600 uppercase tracking-widest border-b border-slate-100 pb-2 mb-3 lg:mb-4"><i class="fas fa-cogs mr-1"></i> Parameter Operasional</h4>
+                    <div class="grid grid-cols-2 gap-3 lg:gap-4 mb-5 lg:mb-6">
+                        <div class="space-y-1">
+                            <label class="text-[9px] lg:text-[10px] font-bold text-slate-500 uppercase tracking-widest">Jam / Hari</label>
+                            <input type="number" id="calc-hours" value="16" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 lg:py-3 font-bold text-xs lg:text-sm focus:border-indigo-500 outline-none">
+                        </div>
+                        <div class="space-y-1">
+                            <label class="text-[9px] lg:text-[10px] font-bold text-slate-500 uppercase tracking-widest">Hari / Bln</label>
+                            <input type="number" id="calc-days" value="30" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 lg:py-3 font-bold text-xs lg:text-sm focus:border-indigo-500 outline-none">
+                        </div>
+                    </div>
+
+                    <div class="space-y-2 lg:space-y-3">
+                        <label class="text-[9px] lg:text-[10px] font-bold text-slate-500 uppercase tracking-widest">Daftar Unit AC</label>
+                        <div id="calc-ac-rows" class="space-y-2"></div>
+                        <button onclick="addACRowCalc()" class="text-[9px] lg:text-[10px] font-bold uppercase text-indigo-600 bg-indigo-50 px-4 py-2.5 lg:py-3 rounded-xl hover:bg-indigo-100 transition-colors w-full border border-indigo-100 tracking-widest">+ Tambah Varian AC</button>
+                    </div>
+                </div>
+
+                <!-- SECTION 2: HASIL LAPORAN (Muncul saat dihitung) -->
+                <div id="calc-report-section" class="hidden pb-6 lg:pb-10">
+                    
+                    <!-- HEADER KHUSUS PRINT (Menggunakan Logo dan WA) -->
+                    <div class="hidden print:flex mb-6 lg:mb-8 justify-between items-center border-b-4 border-indigo-950 pb-4 lg:pb-6">
+                        <div class="flex items-center gap-4">
+                            <img src="https://ik.imagekit.io/pasukandigital/pasukan-digital-id/airtron-kalimaja/airtron_kalimaja_sewa-penghemat-ac_logo.webp?tr=w-300,q-70" alt="Kalimaja Logo" class="h-12 lg:h-14 w-auto object-contain" />
+                            <div class="text-left">
+                                <h1 class="text-2xl lg:text-3xl font-black italic uppercase text-indigo-950 tracking-tighter leading-none">KALIMAJA AIRTRON</h1>
+                                <p class="text-[9px] lg:text-[10px] font-bold text-slate-500 uppercase tracking-widest mt-1">Laporan Estimasi Efisiensi Energi (Zero CAPEX)</p>
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-[8px] lg:text-[9px] font-bold text-slate-400 uppercase tracking-widest mb-1">Layanan Klien / Konsultasi</p>
+                            <p class="text-sm lg:text-base font-black text-slate-800"><i class="fab fa-whatsapp text-green-500 mr-1"></i>0851 1103 3789</p>
+                        </div>
+                    </div>
+
+                    <!-- Laporan Header (Terlihat di UI dan Print) -->
+                    <div class="mb-6 lg:mb-8 pb-4 lg:pb-6 border-b border-slate-200 flex justify-between items-start break-inside-avoid">
+                        <div>
+                            <h4 class="text-lg lg:text-2xl font-black italic text-slate-900 uppercase tracking-tighter print:hidden">Laporan Self Assessment</h4>
+                            <p class="text-[9px] lg:text-[10px] font-bold text-slate-500 uppercase tracking-widest mt-1 lg:mt-2">Disusun Untuk:</p>
+                            <h5 id="res-company" class="text-base lg:text-xl font-black text-indigo-900 uppercase leading-tight mt-1">-</h5>
+                            <p id="res-address" class="text-[10px] lg:text-xs font-medium text-slate-500 mt-1">-</p>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-[9px] lg:text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">PIC / Kontak:</p>
+                            <p id="res-pic" class="text-xs lg:text-sm font-bold text-slate-900 uppercase">-</p>
+                            <p id="res-wa" class="text-[10px] lg:text-xs font-bold text-slate-500 mono">-</p>
+                        </div>
+                    </div>
+
+                    <!-- Laporan Body -->
+                    <div class="space-y-4 lg:space-y-6">
+                        <div class="bg-slate-50 p-4 lg:p-6 rounded-xl lg:rounded-2xl border border-slate-200 break-inside-avoid">
+                            <h4 class="text-[9px] lg:text-[10px] font-black text-indigo-600 uppercase tracking-widest border-b border-slate-200 pb-2 mb-3 lg:mb-4"><i class="fas fa-chart-pie mr-1"></i> Ringkasan Parameter</h4>
+                            <div class="grid grid-cols-2 gap-4 lg:gap-6">
+                                <div>
+                                    <span class="text-[8px] lg:text-[9px] font-bold text-slate-400 uppercase tracking-widest block mb-1">Total Unit Terdaftar</span>
+                                    <span id="res-units" class="text-lg lg:text-xl font-black text-slate-800">0 Unit</span>
+                                </div>
+                                <div>
+                                    <span class="text-[8px] lg:text-[9px] font-bold text-slate-400 uppercase tracking-widest block mb-1">Estimasi Operasional</span>
+                                    <span id="res-time" class="text-lg lg:text-xl font-black text-slate-800">0 Jam / 0 Hari</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Proyeksi Bulanan -->
+                        <div class="bg-white p-4 lg:p-6 rounded-xl lg:rounded-2xl border border-slate-200 break-inside-avoid shadow-sm">
+                            <h4 class="text-[9px] lg:text-[10px] font-black text-emerald-600 uppercase tracking-widest border-b border-slate-200 pb-2 mb-3 lg:mb-4"><i class="fas fa-wallet mr-1"></i> Proyeksi Keuangan Bulanan</h4>
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 lg:gap-6">
+                                <div class="p-3 lg:p-4 bg-slate-50 rounded-lg lg:rounded-xl border border-slate-100">
+                                    <span class="text-[8px] lg:text-[9px] font-bold text-slate-400 uppercase tracking-widest block mb-1">Tagihan Normal</span>
+                                    <span id="res-normal" class="text-base lg:text-lg font-black text-slate-700 mono">Rp 0</span>
+                                </div>
+                                <div class="p-3 lg:p-4 bg-indigo-50 rounded-lg lg:rounded-xl border border-indigo-100">
+                                    <span class="text-[8px] lg:text-[9px] font-bold text-indigo-600 uppercase tracking-widest block mb-1">Potensi Hemat (35%)</span>
+                                    <span id="res-hemat" class="text-base lg:text-lg font-black text-indigo-700 mono">Rp 0</span>
+                                </div>
+                                <div class="p-3 lg:p-4 bg-emerald-50 rounded-lg lg:rounded-xl border border-emerald-200 shadow-inner">
+                                    <span class="text-[8px] lg:text-[9px] font-bold text-emerald-700 uppercase tracking-widest block mb-1">Laba Bersih Klien (30%)</span>
+                                    <span id="res-laba" class="text-lg lg:text-xl font-black text-emerald-700 mono">Rp 0</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Proyeksi 3 Tahun -->
+                        <div class="bg-indigo-950 p-4 lg:p-6 rounded-xl lg:rounded-2xl border border-indigo-900 break-inside-avoid shadow-sm print-dark-card text-white">
+                            <h4 class="text-[9px] lg:text-[10px] font-black text-indigo-300 uppercase tracking-widest border-b border-indigo-800/50 pb-2 mb-3 lg:mb-4"><i class="fas fa-calendar-alt mr-1"></i> Proyeksi Akumulasi 3 Tahun (36 Bulan)</h4>
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 lg:gap-6">
+                                <div class="p-3 lg:p-4 bg-white/5 rounded-lg lg:rounded-xl border border-white/10">
+                                    <span class="text-[8px] lg:text-[9px] font-bold text-slate-400 uppercase tracking-widest block mb-1">Total Penghematan</span>
+                                    <span id="res-hemat-3y" class="text-base lg:text-lg font-black text-white mono">Rp 0</span>
+                                </div>
+                                <div class="p-3 lg:p-4 bg-emerald-500/20 rounded-lg lg:rounded-xl border border-emerald-500/30">
+                                    <span class="text-[8px] lg:text-[9px] font-bold text-emerald-300 uppercase tracking-widest block mb-1">Total Laba Klien (30%)</span>
+                                    <span id="res-laba-3y" class="text-base lg:text-lg font-black text-emerald-400 mono">Rp 0</span>
+                                </div>
+                                <div class="p-3 lg:p-4 bg-blue-500/20 rounded-lg lg:rounded-xl border border-blue-500/30">
+                                    <span class="text-[8px] lg:text-[9px] font-bold text-blue-300 uppercase tracking-widest block mb-1">Revenue Kalimaja (70%)</span>
+                                    <span id="res-rev-3y" class="text-base lg:text-lg font-black text-blue-400 mono">Rp 0</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CAPEX -->
+                        <div class="bg-amber-50 p-5 lg:p-8 rounded-xl lg:rounded-2xl border border-amber-200 flex flex-col sm:flex-row justify-between sm:items-center gap-3 lg:gap-4 break-inside-avoid shadow-md">
+                            <div>
+                                <span class="text-[9px] lg:text-[11px] font-black text-amber-800 uppercase tracking-widest block">Nilai Investasi Alat (CAPEX)</span>
+                                <span class="text-[9px] lg:text-[10px] text-amber-700 font-bold italic mt-1 block">Ditanggung 100% oleh Kalimaja (Zero CAPEX)</span>
+                            </div>
+                            <div class="text-left sm:text-right">
+                                <span id="res-capex" class="text-2xl lg:text-3xl font-black text-amber-600 mono drop-shadow-sm">Rp 0</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 lg:mt-12 pt-4 lg:pt-6 border-t border-slate-200 text-center hidden print:block" id="print-footer-info">
+                        <p class="text-[8px] lg:text-[10px] font-bold text-slate-400 uppercase tracking-widest">Dokumen ini adalah simulasi awal | PT KALIMAJA SURYA ALAM | kalimaja.com | WA: 085111033789</p>
+                    </div>
+                </div>
+
+            </div>
+            
+            <!-- Modal Footer Buttons -->
+            <div class="p-4 lg:p-6 bg-slate-50 border-t border-slate-100 no-print-calc">
+                <!-- Tombol saat mode Input -->
+                <button id="btn-calc-submit" onclick="calculateSim()" class="w-full bg-indigo-950 text-white py-3.5 lg:py-4 rounded-xl font-black uppercase tracking-widest hover:bg-black transition-all shadow-md text-[10px] lg:text-xs">Hitung Laporan Estimasi</button>
+                
+                <!-- Tombol saat mode Report -->
+                <div id="btn-calc-actions" class="hidden flex-col sm:flex-row gap-3 lg:gap-4">
+                    <button onclick="resetCalc()" class="flex-1 bg-slate-200 text-slate-700 py-3.5 lg:py-4 rounded-xl font-black uppercase tracking-widest hover:bg-slate-300 transition-all text-[10px] lg:text-xs">Kembali Edit</button>
+                    <!-- Tombol ini berfungsi ganda: Mencetak PDF sekaligus Mengirim Data secara diam-diam -->
+                    <button onclick="printAssessment()" class="flex-1 bg-indigo-600 text-white py-3.5 lg:py-4 rounded-xl font-black uppercase tracking-widest hover:bg-indigo-800 transition-all shadow-md text-[10px] lg:text-xs"><i class="fas fa-print mr-1"></i> Cetak Laporan PDF</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPT UI LOGIC & GOOGLE SHEETS -->
+    <script>
+        // Variabel global untuk menyimpan data form sementara
+        window.kalimajaLeadData = null;
+
+        // Smooth menu toggle
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu && menu.classList.contains('active')) {
+                menu.classList.remove('active');
+            } else if(menu) {
+                menu.classList.add('active');
+            }
+        }
+
+        // --- SCRIPT SELF ASSESSMENT ---
+        window.AC_LIBRARY_CALC = [
+            { pk: '1', watt: 840, price: 2750000 }, { pk: '1.5', watt: 1260, price: 2750000 },
+            { pk: '2', watt: 1680, price: 3150000 }, { pk: '2.5', watt: 2100, price: 3150000 },
+            { pk: '3', watt: 2520, price: 3150000 }, { pk: '3.5', watt: 2940, price: 4450000 },
+            { pk: '4', watt: 3360, price: 4450000 }, { pk: '4.5', watt: 3780, price: 4450000 },
+            { pk: '5', watt: 4200, price: 5700000 }, { pk: '6', watt: 5040, price: 5700000 },
+            { pk: '7', watt: 5880, price: 5700000 }, { pk: '8', watt: 6720, price: 6500000 },
+            { pk: '10', watt: 8400, price: 8500000 }, { pk: '12', watt: 10080, price: 10500000 },
+            { pk: '15', watt: 12600, price: 12500000 }, { pk: '18', watt: 15120, price: 14500000 },
+            { pk: '20', watt: 16800, price: 16500000 }
+        ];
+
+        function openCalcModal() {
+            resetCalc(); // selalu mulai dari form input
+            const m = document.getElementById('calc-modal');
+            if(m) m.classList.remove('opacity-0', 'pointer-events-none');
+            const container = document.getElementById('calc-ac-rows');
+            if(container && container.children.length === 0) {
+                addACRowCalc('2', 5); // default
+            }
+        }
+        
+        function closeCalcModal() {
+            const m = document.getElementById('calc-modal');
+            if(m) m.classList.add('opacity-0', 'pointer-events-none');
+        }
+
+        function resetCalc() {
+            document.getElementById('calc-input-section').classList.remove('hidden');
+            document.getElementById('calc-report-section').classList.add('hidden');
+            document.getElementById('btn-calc-submit').classList.remove('hidden');
+            document.getElementById('btn-calc-actions').classList.add('hidden');
+            document.getElementById('print-footer-info').classList.add('hidden');
+        }
+
+        function addACRowCalc(pk = '2', count = 1) {
+            const container = document.getElementById('calc-ac-rows');
+            if(!container) return;
+            const rowId = 'calc-row-' + Date.now() + Math.random().toString().substr(2,5);
+            const div = document.createElement('div');
+            div.id = rowId;
+            div.className = 'flex flex-col sm:flex-row items-start sm:items-center gap-2 lg:gap-3 bg-white p-2.5 lg:p-3 rounded-xl border border-slate-200 shadow-sm';
+            let options = window.AC_LIBRARY_CALC.map(l => `<option value="${l.pk}" ${l.pk == pk ? 'selected' : ''}>AC ${l.pk} PK (${l.watt}W)</option>`).join('');
+            div.innerHTML = `
+                <select class="calc-ac-pk w-full sm:flex-1 bg-transparent font-bold outline-none text-xs lg:text-sm text-slate-800 border-b sm:border-none border-slate-100 pb-2 sm:pb-0">${options}</select>
+                <div class="flex items-center justify-between w-full sm:w-auto gap-2">
+                    <input type="number" value="${count}" class="calc-ac-count w-16 lg:w-20 bg-slate-50 border border-slate-200 rounded-lg py-1.5 lg:py-2 text-center font-bold text-xs lg:text-sm outline-none focus:border-indigo-400" min="1">
+                    <button onclick="document.getElementById('${rowId}').remove()" class="text-red-400 px-2 hover:text-red-600"><i class="fas fa-times"></i></button>
+                </div>
+            `;
+            container.appendChild(div);
+        }
+
+        function calculateSim() {
+            // Ambil Data Identitas
+            const company = document.getElementById('calc-company').value.trim();
+            const pic = document.getElementById('calc-pic').value.trim();
+            const wa = document.getElementById('calc-wa').value.trim();
+            const address = document.getElementById('calc-address').value.trim();
+
+            if (!company || !pic) {
+                alert("Mohon isi Nama Perusahaan dan Nama PIC terlebih dahulu.");
+                return;
+            }
+
+            // Ambil Data Kalkulasi
+            const rows = document.querySelectorAll('#calc-ac-rows > div');
+            const hours = parseFloat(document.getElementById('calc-hours').value) || 16;
+            const days = parseFloat(document.getElementById('calc-days').value) || 30;
+            
+            let totalCapex = 0; let totalWatt = 0; let totalUnits = 0;
+            
+            rows.forEach(row => {
+                const pk = row.querySelector('.calc-ac-pk').value;
+                const count = parseInt(row.querySelector('.calc-ac-count').value) || 0;
+                const lib = window.AC_LIBRARY_CALC.find(l => l.pk == pk);
+                if (count > 0 && lib) {
+                    totalCapex += lib.price * count;
+                    totalWatt += lib.watt * count;
+                    totalUnits += count;
+                }
+            });
+
+            if(totalUnits === 0) return alert("Tambahkan minimal 1 Unit AC.");
+
+            const tarif = 1615;
+            // Kalkulasi Bulanan
+            const kwhNormalMo = (totalWatt / 1000) * hours * days;
+            const kwhOptMo = kwhNormalMo * 0.65; // 35% saving
+            const idrNormalMo = kwhNormalMo * tarif;
+            const idrSavedMo = (kwhNormalMo - kwhOptMo) * tarif;
+            const customerShare = idrSavedMo * 0.3; // 30% Laba Klien
+            const kalimajaShare = idrSavedMo * 0.7; // 70% Revenue Kalimaja
+
+            // Kalkulasi Akumulasi 3 Tahun (36 Bulan)
+            const idrSaved3Y = idrSavedMo * 36;
+            const customerShare3Y = customerShare * 36;
+            const kalimajaShare3Y = kalimajaShare * 36;
+
+            const formatRp = (val) => new Intl.NumberFormat('id-ID', {style:'currency', currency:'IDR', maximumFractionDigits:0}).format(val);
+
+            // Suntik Data ke Laporan
+            document.getElementById('res-company').innerText = company;
+            document.getElementById('res-pic').innerText = pic;
+            document.getElementById('res-wa').innerText = wa || "-";
+            document.getElementById('res-address').innerText = address || "-";
+            
+            document.getElementById('res-units').innerText = totalUnits + " Unit";
+            document.getElementById('res-time').innerText = hours + " Jam / " + days + " Hari";
+
+            // Inject DOM Bulanan
+            document.getElementById('res-normal').innerText = formatRp(idrNormalMo);
+            document.getElementById('res-hemat').innerText = formatRp(idrSavedMo);
+            document.getElementById('res-laba').innerText = formatRp(customerShare);
+            
+            // Inject DOM 3 Tahun
+            document.getElementById('res-hemat-3y').innerText = formatRp(idrSaved3Y);
+            document.getElementById('res-laba-3y').innerText = formatRp(customerShare3Y);
+            document.getElementById('res-rev-3y').innerText = formatRp(kalimajaShare3Y);
+
+            // Inject CAPEX
+            document.getElementById('res-capex').innerText = formatRp(totalCapex);
+
+            // Simpan data ke variabel global untuk dikirim ke Google Sheets nanti
+            window.kalimajaLeadData = {
+                company: company,
+                pic: pic,
+                wa: wa,
+                address: address,
+                totalUnits: totalUnits,
+                hours: hours,
+                days: days,
+                idrNormalMo: formatRp(idrNormalMo),
+                idrSavedMo: formatRp(idrSavedMo),
+                customerShare: formatRp(customerShare),
+                customerShare3Y: formatRp(customerShare3Y),
+                totalCapex: formatRp(totalCapex)
+            };
+            
+            // Animasi Transisi Tampilan
+            document.getElementById('calc-input-section').classList.add('hidden');
+            document.getElementById('calc-report-section').classList.remove('hidden');
+            document.getElementById('btn-calc-submit').classList.add('hidden');
+            document.getElementById('btn-calc-actions').classList.remove('hidden');
+            document.getElementById('btn-calc-actions').classList.add('flex');
+        }
+
+        function printAssessment() {
+            // Tampilkan footer info saat nge-print
+            document.getElementById('print-footer-info').classList.remove('hidden');
+            document.body.classList.add('print-calc-mode');
+            
+            // --- KIRIM DATA DIAM-DIAM KE GOOGLE SHEETS ---
+            if (window.kalimajaLeadData) {
+                // PENTING: Ganti tulisan di bawah dengan URL Aplikasi Web Google Sheets Anda
+                const scriptURL = 'MASUKKAN_URL_WEB_APP_GOOGLE_SHEET_ANDA_DISINI';
+                
+                const formData = new FormData();
+                for (const key in window.kalimajaLeadData) {
+                    formData.append(key, window.kalimajaLeadData[key]);
+                }
+                
+                // Proses kirim berjalan di latar belakang tanpa me-reload halaman
+                fetch(scriptURL, { method: 'POST', body: formData })
+                    .then(response => console.log('Data terkirim ke server secara diam-diam'))
+                    .catch(error => console.error('Gagal mengirim data', error.message));
+                
+                // Kosongkan agar tidak double send jika klien iseng klik tombol print berkali-kali
+                window.kalimajaLeadData = null;
+            }
+
+            // Panggil dialog Print PDF
+            window.print();
+            
+            // Bersihkan class setelah print selesai (atau dibatalkan)
+            setTimeout(() => {
+                document.body.classList.remove('print-calc-mode');
+                document.getElementById('print-footer-info').classList.add('hidden');
+            }, 500);
+        }
+    </script>
+</body>
+</html>
