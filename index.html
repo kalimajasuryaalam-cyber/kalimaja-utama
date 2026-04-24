@@ -827,14 +827,17 @@
                             </div>
                         </div>
 
-                        <!-- CAPEX -->
-                        <div class="bg-amber-50 p-5 lg:p-8 rounded-xl lg:rounded-2xl border border-amber-200 flex flex-col sm:flex-row justify-between sm:items-center gap-3 lg:gap-4 break-inside-avoid shadow-md">
-                            <div>
-                                <span class="text-[9px] lg:text-[11px] font-black text-amber-800 uppercase tracking-widest block">Nilai Investasi Alat (CAPEX)</span>
-                                <span class="text-[9px] lg:text-[10px] text-amber-700 font-bold italic mt-1 block">Ditanggung 100% oleh Kalimaja (Zero CAPEX)</span>
+                        <!-- CAPEX & BEP -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6 break-inside-avoid">
+                            <div class="bg-amber-50 p-4 lg:p-6 rounded-xl lg:rounded-2xl border border-amber-200 shadow-sm flex flex-col justify-center">
+                                <span class="text-[9px] lg:text-[10px] font-black text-amber-800 uppercase tracking-widest block mb-1">Nilai Investasi (CAPEX)</span>
+                                <span id="res-capex" class="text-xl lg:text-2xl font-black text-amber-600 mono drop-shadow-sm">Rp 0</span>
+                                <span class="text-[9px] lg:text-[10px] text-amber-700 font-bold italic mt-2 block">100% Ditanggung Kalimaja (Zero CAPEX)</span>
                             </div>
-                            <div class="text-left sm:text-right">
-                                <span id="res-capex" class="text-2xl lg:text-3xl font-black text-amber-600 mono drop-shadow-sm">Rp 0</span>
+                            <div class="bg-blue-50 p-4 lg:p-6 rounded-xl lg:rounded-2xl border border-blue-200 shadow-sm flex flex-col justify-center">
+                                <span class="text-[9px] lg:text-[10px] font-black text-blue-800 uppercase tracking-widest block mb-1">Estimasi BEP / Payback</span>
+                                <span id="res-bep" class="text-xl lg:text-2xl font-black text-blue-600 mono drop-shadow-sm">0 Bulan</span>
+                                <span class="text-[9px] lg:text-[10px] text-blue-700 font-bold italic mt-2 block">Berdasarkan total penghematan</span>
                             </div>
                         </div>
                     </div>
@@ -977,6 +980,9 @@
             const customerShare3Y = customerShare * 36;
             const kalimajaShare3Y = kalimajaShare * 36;
 
+            // Kalkulasi BEP (Break Even Point)
+            const bepMonths = idrSavedMo > 0 ? (totalCapex / idrSavedMo).toFixed(1) : 0;
+
             const formatRp = (val) => new Intl.NumberFormat('id-ID', {style:'currency', currency:'IDR', maximumFractionDigits:0}).format(val);
 
             // Suntik Data ke Laporan
@@ -999,8 +1005,9 @@
             document.getElementById('res-laba-3y').innerText = formatRp(customerShare3Y);
             document.getElementById('res-rev-3y').innerText = formatRp(kalimajaShare3Y);
 
-            // Inject CAPEX
+            // Inject CAPEX & BEP
             document.getElementById('res-capex').innerText = formatRp(totalCapex);
+            document.getElementById('res-bep').innerText = bepMonths + " Bulan";
 
             // Simpan data ke variabel global untuk dikirim ke Google Sheets nanti
             window.kalimajaLeadData = {
@@ -1016,7 +1023,8 @@
                 idrSavedMo: formatRp(idrSavedMo),
                 customerShare: formatRp(customerShare),
                 customerShare3Y: formatRp(customerShare3Y),
-                totalCapex: formatRp(totalCapex)
+                totalCapex: formatRp(totalCapex),
+                bepMonths: bepMonths + " Bulan"
             };
             
             // Animasi Transisi Tampilan
