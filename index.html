@@ -712,7 +712,7 @@
 
                     <!-- Specs -->
                     <h4 class="text-[9px] lg:text-[10px] font-black text-indigo-600 uppercase tracking-widest border-b border-slate-100 pb-2 mb-3 lg:mb-4"><i class="fas fa-cogs mr-1"></i> Parameter Operasional</h4>
-                    <div class="grid grid-cols-2 gap-3 lg:gap-4 mb-5 lg:mb-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 lg:gap-4 mb-5 lg:mb-6">
                         <div class="space-y-1">
                             <label class="text-[9px] lg:text-[10px] font-bold text-slate-500 uppercase tracking-widest">Jam / Hari</label>
                             <input type="number" id="calc-hours" value="16" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 lg:py-3 font-bold text-xs lg:text-sm focus:border-indigo-500 outline-none">
@@ -720,6 +720,16 @@
                         <div class="space-y-1">
                             <label class="text-[9px] lg:text-[10px] font-bold text-slate-500 uppercase tracking-widest">Hari / Bln</label>
                             <input type="number" id="calc-days" value="30" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 lg:py-3 font-bold text-xs lg:text-sm focus:border-indigo-500 outline-none">
+                        </div>
+                        <div class="space-y-1">
+                            <label class="text-[9px] lg:text-[10px] font-bold text-slate-500 uppercase tracking-widest">Target Hemat</label>
+                            <select id="calc-saving-percent" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 lg:py-3 font-bold text-xs lg:text-sm focus:border-indigo-500 outline-none">
+                                <option value="30">30%</option>
+                                <option value="35" selected>35%</option>
+                                <option value="40">40%</option>
+                                <option value="45">45%</option>
+                                <option value="50">50%</option>
+                            </select>
                         </div>
                     </div>
 
@@ -788,7 +798,7 @@
                                     <span id="res-normal" class="text-base lg:text-lg font-black text-slate-700 mono">Rp 0</span>
                                 </div>
                                 <div class="p-3 lg:p-4 bg-indigo-50 rounded-lg lg:rounded-xl border border-indigo-100">
-                                    <span class="text-[8px] lg:text-[9px] font-bold text-indigo-600 uppercase tracking-widest block mb-1">Potensi Hemat (35%)</span>
+                                    <span id="res-hemat-label" class="text-[8px] lg:text-[9px] font-bold text-indigo-600 uppercase tracking-widest block mb-1">Potensi Hemat (35%)</span>
                                     <span id="res-hemat" class="text-base lg:text-lg font-black text-indigo-700 mono">Rp 0</span>
                                 </div>
                                 <div class="p-3 lg:p-4 bg-emerald-50 rounded-lg lg:rounded-xl border border-emerald-200 shadow-inner">
@@ -936,6 +946,7 @@
             const rows = document.querySelectorAll('#calc-ac-rows > div');
             const hours = parseFloat(document.getElementById('calc-hours').value) || 16;
             const days = parseFloat(document.getElementById('calc-days').value) || 30;
+            const savingPercent = parseFloat(document.getElementById('calc-saving-percent').value) || 35;
             
             let totalCapex = 0; let totalWatt = 0; let totalUnits = 0;
             
@@ -955,7 +966,7 @@
             const tarif = 1615;
             // Kalkulasi Bulanan
             const kwhNormalMo = (totalWatt / 1000) * hours * days;
-            const kwhOptMo = kwhNormalMo * 0.65; // 35% saving
+            const kwhOptMo = kwhNormalMo * (1 - (savingPercent / 100)); // Kalkulasi berdasarkan persentase dinamis
             const idrNormalMo = kwhNormalMo * tarif;
             const idrSavedMo = (kwhNormalMo - kwhOptMo) * tarif;
             const customerShare = idrSavedMo * 0.3; // 30% Laba Klien
@@ -979,6 +990,7 @@
 
             // Inject DOM Bulanan
             document.getElementById('res-normal').innerText = formatRp(idrNormalMo);
+            document.getElementById('res-hemat-label').innerText = `Potensi Hemat (${savingPercent}%)`;
             document.getElementById('res-hemat').innerText = formatRp(idrSavedMo);
             document.getElementById('res-laba').innerText = formatRp(customerShare);
             
@@ -999,6 +1011,7 @@
                 totalUnits: totalUnits,
                 hours: hours,
                 days: days,
+                savingPercent: savingPercent + "%",
                 idrNormalMo: formatRp(idrNormalMo),
                 idrSavedMo: formatRp(idrSavedMo),
                 customerShare: formatRp(customerShare),
