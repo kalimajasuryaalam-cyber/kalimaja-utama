@@ -772,27 +772,33 @@
                             </div>
                         </div>
 
-                        <!-- CAPEX, BEP, ROI & IRR -->
-                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 lg:gap-4 break-inside-avoid">
-                            <div class="bg-amber-50 p-4 lg:p-5 rounded-xl border border-amber-200 shadow-sm flex flex-col justify-center">
-                                <span class="text-[8px] lg:text-[9px] font-black text-amber-800 uppercase tracking-widest block mb-1">Investasi (CAPEX)</span>
-                                <span id="res-capex" class="text-base lg:text-xl font-black text-amber-600 mono drop-shadow-sm">Rp 0</span>
-                                <span class="text-[7px] lg:text-[8px] text-amber-700 font-bold italic mt-1 block">Zero CAPEX (Kalimaja)</span>
+                        <!-- CAPEX Highlight -->
+                        <div class="bg-gradient-to-r from-amber-50 to-orange-50 p-5 lg:p-6 rounded-xl lg:rounded-2xl border border-amber-200 flex flex-col sm:flex-row justify-between sm:items-center gap-4 break-inside-avoid shadow-sm">
+                            <div>
+                                <span class="text-[10px] lg:text-xs font-black text-amber-900 uppercase tracking-widest block mb-1">Nilai Investasi Alat (CAPEX)</span>
+                                <span class="text-[9px] lg:text-[10px] text-amber-800 font-bold italic bg-amber-200/50 px-2 py-1 rounded inline-block">100% Ditanggung Kalimaja (Zero CAPEX)</span>
                             </div>
-                            <div class="bg-blue-50 p-4 lg:p-5 rounded-xl border border-blue-200 shadow-sm flex flex-col justify-center">
-                                <span class="text-[8px] lg:text-[9px] font-black text-blue-800 uppercase tracking-widest block mb-1">Payback (BEP)</span>
-                                <span id="res-bep" class="text-base lg:text-xl font-black text-blue-600 mono drop-shadow-sm">0 Bln</span>
-                                <span class="text-[7px] lg:text-[8px] text-blue-700 font-bold italic mt-1 block">Berdasarkan Total Hemat</span>
+                            <div class="text-left sm:text-right mt-1 sm:mt-0">
+                                <span id="res-capex" class="text-2xl lg:text-3xl font-black text-amber-600 mono drop-shadow-sm">Rp 0</span>
                             </div>
-                            <div class="bg-emerald-50 p-4 lg:p-5 rounded-xl border border-emerald-200 shadow-sm flex flex-col justify-center">
-                                <span class="text-[8px] lg:text-[9px] font-black text-emerald-800 uppercase tracking-widest block mb-1">Project ROI (3th)</span>
-                                <span id="res-roi" class="text-base lg:text-xl font-black text-emerald-600 mono drop-shadow-sm">0%</span>
-                                <span class="text-[7px] lg:text-[8px] text-emerald-700 font-bold italic mt-1 block">Return on Investment</span>
+                        </div>
+
+                        <!-- BEP, ROI & IRR -->
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 lg:gap-4 break-inside-avoid">
+                            <div class="bg-blue-50 p-4 lg:p-5 rounded-xl lg:rounded-2xl border border-blue-200 shadow-sm flex flex-col justify-center">
+                                <span class="text-[9px] lg:text-[10px] font-black text-blue-800 uppercase tracking-widest block mb-1">Payback (BEP)</span>
+                                <span id="res-bep" class="text-lg lg:text-2xl font-black text-blue-600 mono drop-shadow-sm">0 Bln</span>
+                                <span class="text-[8px] lg:text-[9px] text-blue-700 font-medium mt-1 block">Berdasarkan Total Hemat</span>
                             </div>
-                            <div class="bg-purple-50 p-4 lg:p-5 rounded-xl border border-purple-200 shadow-sm flex flex-col justify-center">
-                                <span class="text-[8px] lg:text-[9px] font-black text-purple-800 uppercase tracking-widest block mb-1">Estimasi IRR</span>
-                                <span id="res-irr" class="text-base lg:text-xl font-black text-purple-600 mono drop-shadow-sm">0%</span>
-                                <span class="text-[7px] lg:text-[8px] text-purple-700 font-bold italic mt-1 block">Acuan: Himbara + 10%</span>
+                            <div class="bg-emerald-50 p-4 lg:p-5 rounded-xl lg:rounded-2xl border border-emerald-200 shadow-sm flex flex-col justify-center">
+                                <span class="text-[9px] lg:text-[10px] font-black text-emerald-800 uppercase tracking-widest block mb-1">Project ROI (3th)</span>
+                                <span id="res-roi" class="text-lg lg:text-2xl font-black text-emerald-600 mono drop-shadow-sm">0%</span>
+                                <span class="text-[8px] lg:text-[9px] text-emerald-700 font-medium mt-1 block">Return on Investment</span>
+                            </div>
+                            <div class="bg-purple-50 p-4 lg:p-5 rounded-xl lg:rounded-2xl border border-purple-200 shadow-sm flex flex-col justify-center">
+                                <span class="text-[9px] lg:text-[10px] font-black text-purple-800 uppercase tracking-widest block mb-1">Estimasi IRR</span>
+                                <span id="res-irr" class="text-lg lg:text-2xl font-black text-purple-600 mono drop-shadow-sm">0%</span>
+                                <span class="text-[8px] lg:text-[9px] text-purple-700 font-medium mt-1 block">Acuan: Himbara + 10%</span>
                             </div>
                         </div>
                     </div>
