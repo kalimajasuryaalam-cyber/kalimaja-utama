@@ -5,12 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Solusi Penghemat Listrik AC Tanpa Dana di Muka – Hemat Tagihan Listrik Hingga 50% untuk AC, Cold Storage, dan Freezer</title>
     
-    <!-- SEO & Meta Tags -->
     <meta name="description" content="Solusi penghemat listrik AC tanpa dana di muka. Hemat tagihan listrik hingga 50% untuk semua AC, cold storage, dan freezer bersama Kalimaja Airtron (Zero CAPEX)." />
     <meta name="keywords" content="Penghemat Listrik AC, Solusi Hemat Listrik AC, Rental Penghemat Listrik AC, Zero CAPEX Penghematan Listrik, Efisiensi Energi AC" />
     <meta name="author" content="kalimaja" />
     
-    <!-- Tailwind & Fonts & Icons -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -68,10 +66,8 @@
 </head>
 <body class="antialiased overflow-x-hidden">
 
-    <!-- JSON-LD SEO Data -->
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"kalimaja.com | Solusi Penghemat Listrik AC Tanpa Dana di Muka","url":"https://kalimaja.com","telephone":"6285111033789","address":{"@type":"PostalAddress","streetAddress":"Jl dharma kencana blok A23, RT.3/RW.11, Duri Kosambi, Kota Jakarta Barat","addressLocality":"Jakarta Barat","postalCode":"11750","addressCountry":"ID"}}</script>
 
-    <!-- NAVIGATION -->
     <nav class="fixed w-[calc(100%-2rem)] mx-4 mt-4 top-0 z-50 glass-nav shadow-lg shadow-slate-200/50 rounded-2xl transition-all duration-300">
         <div class="px-4 lg:px-5 py-2 lg:py-2.5 flex items-center justify-between">
             <div class="flex items-center gap-2 lg:gap-3">
@@ -106,7 +102,6 @@
             </div>
         </div>
 
-        <!-- MOBILE MENU TRAY -->
         <div id="mobile-menu" class="absolute top-full left-0 w-full bg-white/95 backdrop-blur-xl border-b border-slate-200 p-4 sm:p-5 flex flex-col gap-1 shadow-xl lg:hidden -z-10 rounded-b-2xl">
             <a href="#science" onclick="toggleMenu()" class="block font-bold uppercase tracking-widest text-[10px] sm:text-xs text-slate-600 hover:text-indigo-600 border-b border-slate-100 py-2.5">Sains Termal</a>
             <a href="#skema-rental" onclick="toggleMenu()" class="block font-bold uppercase tracking-widest text-[10px] sm:text-xs text-slate-600 hover:text-indigo-600 border-b border-slate-100 py-2.5">Skema Bisnis</a>
@@ -120,7 +115,6 @@
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
     <section id="home" class="relative pt-32 pb-24 lg:pt-40 lg:pb-32 overflow-hidden bg-gradient-brand rounded-b-[2rem] lg:rounded-b-[3rem] text-white">
         <div class="absolute inset-0 bg-[url('https://ik.imagekit.io/pasukandigital/pasukan-digital-id/airtron-kalimaja/airtron_kalimaja_sewa-penghemat-ac_banner-2-a.webp')] opacity-10 bg-cover bg-center mix-blend-overlay"></div>
         <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-gradient-to-b from-indigo-500/20 to-transparent blur-[120px]"></div>
@@ -128,7 +122,6 @@
         <div class="max-w-7xl mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             <div class="space-y-6 lg:space-y-8 text-center lg:text-left">
                 
-                <!-- BAGIAN BADGE DAN GAMBAR SCHEMATIC -->
                 <div class="flex flex-col items-center lg:items-start gap-4 lg:gap-6 w-full">
                     <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-[10px] sm:text-xs font-bold tracking-widest text-indigo-200 shrink-0">
                         <span class="relative flex h-2.5 w-2.5">
@@ -138,21 +131,15 @@
                         Zero CAPEX Solution
                     </div>
                     
-                    <!-- GAMBAR DIAGRAM SCHEMATIC SMART FALLBACK DENGAN UPLOAD -->
-                    <!-- KODE DISEMBUNYIKAN: Ditambahkan class "hidden" agar hilang dari layar tapi sistem tetap aman -->
                     <div class="hidden relative items-center justify-center bg-white rounded-2xl overflow-hidden shadow-2xl p-1.5 w-full max-w-[260px] sm:max-w-[340px] transition-all duration-300 hover:scale-105 hover:-translate-y-1 group">
-                        
-                        <!-- Input File Tersembunyi untuk Upload -->
                         <input type="file" id="diagram-upload" class="hidden" accept="image/*" onchange="handleDiagramUpload(event)">
                         
-                        <!-- Tampil jika gambar ada -->
                         <img id="main-diagram-img" src="diagram.jpg" 
                              alt="Installation Diagram" 
                              class="w-full h-auto object-contain transition-all duration-300" 
                              title="Airtron Schematic Diagram"
                              onerror="this.style.display='none'; document.getElementById('fallback-diagram').style.display='flex';">
                              
-                        <!-- Tampil cantik saat di Canvas / Gambar tidak ditemukan (Bisa diklik) -->
                         <label id="fallback-diagram" for="diagram-upload" class="cursor-pointer flex-col items-center justify-center text-slate-400 border-2 border-dashed border-slate-200 hover:border-indigo-400 hover:bg-indigo-50 hover:text-indigo-600 w-full aspect-[4/3] rounded-xl px-4 py-3 bg-slate-50 transition-all" style="display: none;">
                             <i class="fas fa-cloud-upload-alt text-2xl lg:text-3xl mb-2 text-indigo-300 group-hover:text-indigo-500 transition-colors"></i>
                             <span class="text-[9px] lg:text-[10px] font-bold uppercase tracking-widest text-center mt-1">Klik Untuk Upload<br>Blueprint</span>
@@ -165,7 +152,7 @@
                 </h1>
                 
                 <p class="text-slate-300 text-sm sm:text-base lg:text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed font-medium">
-                    Hemat tagihan listrik hingga 50% untuk semua AC, cold storage, dan freezer. Kalimaja Xtron menyediakan solusi efisiensi energi berbasis skema rental tanpa dana di muka.
+                    Hemat tagihan listrik hingga 50% untuk semua AC, cold storage, dan freezer. Kalimaja Airtron menyediakan solusi efisiensi energi berbasis skema rental tanpa dana di muka.
                 </p>
                 
                 <div class="flex flex-col sm:flex-row items-center gap-3 lg:gap-4 justify-center lg:justify-start pt-2">
@@ -182,7 +169,6 @@
                 <div class="absolute inset-0 bg-gradient-to-tr from-indigo-500 to-purple-500 rounded-3xl blur-2xl opacity-40 group-hover:opacity-60 transition-opacity duration-500"></div>
                 <img src="https://ik.imagekit.io/pasukandigital/pasukan-digital-id/airtron-kalimaja/airtron_kalimaja_sewa-penghemat-ac_hero-3.webp?tr=w-800" alt="Kalimaja Airtron Unit" class="relative z-10 w-full h-auto rounded-3xl border border-white/10 shadow-2xl object-cover transform group-hover:scale-[1.02] transition-transform duration-500" />
                 
-                <!-- Floating Badges -->
                 <div class="absolute -left-4 lg:-left-6 top-6 lg:top-10 bg-white/90 backdrop-blur-md text-slate-900 p-3 lg:p-4 rounded-xl lg:rounded-2xl shadow-xl border border-slate-100 z-20 flex items-center gap-2 lg:gap-3 animate-[bounce_3s_infinite]">
                     <div class="h-8 w-8 lg:h-10 lg:w-10 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-sm lg:text-lg"><i class="fas fa-bolt"></i></div>
                     <div>
@@ -194,7 +180,6 @@
         </div>
     </section>
 
-    <!-- STATS SECTION (OVERLAPPING HERO) -->
     <div class="max-w-6xl mx-auto px-6 -mt-12 lg:-mt-16 relative z-20 mb-16 lg:mb-20">
         <div class="glass-card shadow-2xl shadow-slate-200/50 rounded-2xl lg:rounded-3xl p-6 lg:p-8 grid grid-cols-1 md:grid-cols-3 gap-6 divide-y md:divide-y-0 md:divide-x divide-slate-100/50">
             <div class="flex items-center gap-4 lg:gap-6 md:px-4 lg:px-6">
@@ -221,7 +206,6 @@
         </div>
     </div>
 
-    <!-- SECTION: ANALISIS SAINS TERMAL -->
     <section id="science" class="py-16 lg:py-20 px-6 bg-white scroll-mt-24">
         <div class="max-w-7xl mx-auto">
             <div class="flex flex-col md:flex-row justify-between items-end gap-6 lg:gap-10 mb-12 lg:mb-16 border-l-4 border-indigo-900 pl-4 lg:pl-6">
@@ -230,16 +214,15 @@
                     <h3 class="text-3xl lg:text-5xl font-black italic tracking-tighter uppercase leading-[1.1]">ANALISIS <span class="text-gradient">SAINS TERMAL</span></h3>
                 </div>
                 <p class="text-slate-500 max-w-lg font-medium italic text-sm md:text-base">
-                    Memahami bagaimana teknologi Kalimaja Xtron mengubah pemborosan energi menjadi penghematan kas operasional tanpa mengurangi kenyamanan.
+                    Memahami bagaimana teknologi Kalimaja Airtron mengubah pemborosan energi menjadi penghematan kas operasional tanpa mengurangi kenyamanan.
                 </p>
             </div>
 
-            <!-- TAMBAHAN: BAGAIMANA CARA KERJANYA -->
             <div class="mb-10 lg:mb-12 p-6 lg:p-8 bg-indigo-50 border border-indigo-100 rounded-2xl lg:rounded-3xl shadow-sm">
                 <h4 class="text-lg lg:text-xl font-black italic uppercase text-indigo-950 mb-3"><i class="fas fa-info-circle text-indigo-600 mr-2"></i> HOW IT WORKS!</h4>
                 <div class="space-y-4 text-slate-700 text-sm lg:text-base leading-relaxed font-medium">
                     <p>
-                        Xtron adalah retrofit mikroprosesor yang membaca Suhu Ruangan, Koil, & Suhu Lingkungan Sekitar. Perangkat ini menggunakan berbagai algoritma kompleks dalam sistem "sirkuit loop tertutup" untuk mengoptimalkan Waktu Nyala Kompresor, guna memastikan penghematan yang tinggi sekaligus mempertahankan dan menampilkan Suhu yang Ditetapkan secara akurat.
+                        Airtron adalah retrofit mikroprosesor yang membaca Suhu Ruangan, Koil, & Suhu Lingkungan Sekitar. Perangkat ini menggunakan berbagai algoritma kompleks dalam sistem "sirkuit loop tertutup" untuk mengoptimalkan Waktu Nyala Kompresor, guna memastikan penghematan yang tinggi sekaligus mempertahankan dan menampilkan Suhu yang Ditetapkan secara akurat.
                     </p>
                     <p>
                         Retrofit PLC ini <strong>JUGA memiliki fitur Pengunci Suhu (Temperature Lock)</strong> untuk mengunci suhu acuan Anda, yang memberikan <strong>TAMBAHAN penghematan sebesar 25-35%</strong> di atas penghematan operasional standar. Dengan demikian, pelanggan melaporkan pencapaian <strong>penghematan HINGGA 50%</strong> dengan masa Pengembalian Modal (Payback) hanya dalam 3-4 bulan.
@@ -249,7 +232,6 @@
 
             <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
                 <div class="space-y-6 lg:space-y-8">
-                    <!-- Inefisiensi -->
                     <div class="flex gap-4 lg:gap-6 items-start">
                         <div class="shrink-0 h-14 w-14 lg:h-16 lg:w-16 bg-red-50 text-red-600 rounded-xl lg:rounded-2xl flex items-center justify-center text-xl lg:text-2xl shadow-sm border border-red-100">
                             <i class="fas fa-exclamation-triangle"></i>
@@ -261,7 +243,6 @@
                             </p>
                         </div>
                     </div>
-                    <!-- Latent Cold -->
                     <div class="flex gap-4 lg:gap-6 items-start">
                         <div class="shrink-0 h-14 w-14 lg:h-16 lg:w-16 bg-indigo-50 text-indigo-600 rounded-xl lg:rounded-2xl flex items-center justify-center text-xl lg:text-2xl shadow-sm border border-indigo-100">
                             <i class="fas fa-snowflake"></i>
@@ -275,7 +256,6 @@
                     </div>
                 </div>
                 
-                <!-- Spec Breakdown Card -->
                 <div class="bg-slate-50 rounded-3xl lg:rounded-[40px] p-8 lg:p-12 border border-slate-200 shadow-xl shadow-slate-200/50 hover:shadow-indigo-500/10 transition-shadow duration-500">
                     <div class="space-y-6 lg:space-y-8">
                         <div class="flex items-center gap-3 lg:gap-4 border-b border-slate-200 pb-3 lg:pb-4">
@@ -306,7 +286,6 @@
         </div>
     </section>
 
-    <!-- SKEMA RENTAL SECTION -->
     <section id="skema-rental" class="py-16 lg:py-20 px-6 bg-white overflow-hidden scroll-mt-24 border-t border-slate-100">
         <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-10 lg:gap-16 items-start">
             <div class="w-full lg:w-1/3 lg:sticky lg:top-32 space-y-4 lg:space-y-6 text-center lg:text-left">
@@ -321,7 +300,6 @@
             </div>
             
             <div class="w-full lg:w-2/3 grid gap-4 lg:gap-6">
-                <!-- Step Cards -->
                 <div class="bg-slate-50 rounded-2xl lg:rounded-3xl p-6 lg:p-8 border border-slate-100 hover:border-indigo-200 transition-colors group flex gap-4 lg:gap-6 items-start">
                     <div class="text-4xl lg:text-5xl font-black text-slate-200 group-hover:text-indigo-100 transition-colors">01</div>
                     <div class="space-y-1.5 lg:space-y-2 mt-1 lg:mt-2">
@@ -365,7 +343,6 @@
         </div>
     </section>
 
-    <!-- STUDI KASUS (POTENSI) SECTION -->
     <section id="studi-kasus" class="py-16 lg:py-20 px-6 bg-slate-50 border-y border-slate-100 scroll-mt-24">
         <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-10 lg:gap-16 items-center">
             <div class="w-full lg:w-1/3 space-y-4 lg:space-y-6 text-center lg:text-left order-1 lg:order-2">
@@ -405,7 +382,6 @@
         </div>
     </section>
 
-    <!-- SOLUSI INDUSTRI SECTION -->
     <section id="solusi" class="py-16 lg:py-20 bg-white scroll-mt-24 overflow-hidden">
         <div class="max-w-7xl mx-auto px-6 mb-8 lg:mb-12 flex flex-col md:flex-row justify-between items-end gap-4 lg:gap-6">
             <div class="space-y-3 lg:space-y-4 max-w-2xl">
@@ -420,7 +396,6 @@
         </div>
 
         <div id="solusi-slider" class="flex overflow-x-auto snap-x snap-mandatory gap-4 lg:gap-6 pb-12 px-6 lg:px-8 no-scrollbar scroll-smooth">
-            <!-- Card 1 -->
             <div class="snap-center shrink-0 w-[280px] sm:w-[300px] lg:w-[350px] bg-white border border-slate-100 rounded-2xl lg:rounded-3xl shadow-xl shadow-slate-200/30 overflow-hidden hover:-translate-y-2 transition-transform duration-300 group">
                 <div class="relative h-40 lg:h-48 overflow-hidden">
                     <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop" alt="Perkantoran" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
@@ -437,7 +412,6 @@
                 </div>
             </div>
 
-            <!-- Card 2 -->
             <div class="snap-center shrink-0 w-[280px] sm:w-[300px] lg:w-[350px] bg-white border border-slate-100 rounded-2xl lg:rounded-3xl shadow-xl shadow-slate-200/30 overflow-hidden hover:-translate-y-2 transition-transform duration-300 group">
                 <div class="relative h-40 lg:h-48 overflow-hidden">
                     <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=800&auto=format&fit=crop" 
@@ -457,7 +431,6 @@
                 </div>
             </div>
 
-            <!-- Card 3 -->
             <div class="snap-center shrink-0 w-[280px] sm:w-[300px] lg:w-[350px] bg-white border border-slate-100 rounded-2xl lg:rounded-3xl shadow-xl shadow-slate-200/30 overflow-hidden hover:-translate-y-2 transition-transform duration-300 group">
                 <div class="relative h-40 lg:h-48 overflow-hidden">
                     <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=800&auto=format&fit=crop" alt="Rumah Sakit" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
@@ -474,7 +447,6 @@
                 </div>
             </div>
 
-            <!-- Card 4 -->
             <div class="snap-center shrink-0 w-[280px] sm:w-[300px] lg:w-[350px] bg-white border border-slate-100 rounded-2xl lg:rounded-3xl shadow-xl shadow-slate-200/30 overflow-hidden hover:-translate-y-2 transition-transform duration-300 group">
                 <div class="relative h-40 lg:h-48 overflow-hidden">
                     <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=800&auto=format&fit=crop" alt="Retail" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
@@ -491,7 +463,6 @@
                 </div>
             </div>
 
-            <!-- Card 5 -->
             <div class="snap-center shrink-0 w-[280px] sm:w-[300px] lg:w-[350px] bg-white border border-slate-100 rounded-2xl lg:rounded-3xl shadow-xl shadow-slate-200/30 overflow-hidden hover:-translate-y-2 transition-transform duration-300 group">
                 <div class="relative h-40 lg:h-48 overflow-hidden">
                     <img src="https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=800&auto=format&fit=crop" alt="Sekolah & Kampus" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
@@ -508,7 +479,6 @@
                 </div>
             </div>
 
-            <!-- Card 6 -->
             <div class="snap-center shrink-0 w-[280px] sm:w-[300px] lg:w-[350px] bg-white border border-slate-100 rounded-2xl lg:rounded-3xl shadow-xl shadow-slate-200/30 overflow-hidden hover:-translate-y-2 transition-transform duration-300 group">
                 <div class="relative h-40 lg:h-48 overflow-hidden">
                     <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop" alt="Pabrik & Industri" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
@@ -527,7 +497,6 @@
         </div>
     </section>
 
-    <!-- TESTIMONIALS -->
     <section id="klien-kami" class="py-16 lg:py-20 bg-slate-50 border-t border-slate-100 scroll-mt-24">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-10 lg:mb-14 space-y-3 lg:space-y-4">
@@ -537,7 +506,6 @@
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Testi 1 -->
                 <div class="bg-white p-6 lg:p-8 rounded-2xl lg:rounded-3xl border border-slate-100 shadow-lg shadow-slate-200/40 space-y-4 lg:space-y-6">
                     <div class="flex gap-1 text-yellow-400 text-xs lg:text-sm">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -552,7 +520,6 @@
                     </div>
                 </div>
 
-                <!-- Testi 2 -->
                 <div class="bg-white p-6 lg:p-8 rounded-2xl lg:rounded-3xl border border-slate-100 shadow-lg shadow-slate-200/40 space-y-4 lg:space-y-6">
                     <div class="flex gap-1 text-yellow-400 text-xs lg:text-sm">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
@@ -567,7 +534,6 @@
                     </div>
                 </div>
 
-                <!-- Testi 3 -->
                 <div class="bg-white p-6 lg:p-8 rounded-2xl lg:rounded-3xl border border-slate-100 shadow-lg shadow-slate-200/40 space-y-4 lg:space-y-6">
                     <div class="flex gap-1 text-yellow-400 text-xs lg:text-sm">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -585,9 +551,7 @@
         </div>
     </section>
 
-    <!-- SECTION ESG (ENVIRONMENTAL, SOCIAL, GOVERNANCE) -->
     <section id="esg" class="py-16 lg:py-20 bg-slate-950 text-white scroll-mt-24 relative overflow-hidden">
-        <!-- Background Effects -->
         <div class="absolute inset-0 bg-gradient-to-br from-indigo-900/20 to-slate-900 pointer-events-none"></div>
         
         <div class="max-w-7xl mx-auto px-6 relative z-10">
@@ -600,21 +564,18 @@
             </div>
 
             <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
-                <!-- Environmental -->
                 <div class="bg-white/5 border border-white/10 p-6 lg:p-8 rounded-2xl lg:rounded-3xl backdrop-blur-sm hover:bg-white/10 transition-colors">
                     <div class="h-12 w-12 lg:h-14 lg:w-14 bg-emerald-500/20 text-emerald-400 rounded-xl lg:rounded-2xl flex items-center justify-center text-xl lg:text-2xl mb-4 lg:mb-6"><i class="fas fa-globe-asia"></i></div>
                     <h3 class="text-lg lg:text-xl font-bold text-white mb-2 lg:mb-3">Environmental (Lingkungan)</h3>
                     <p class="text-slate-400 text-xs lg:text-sm leading-relaxed">Mendukung terwujudnya Net Zero Emission dengan mereduksi jejak karbon secara masif melalui efisiensi konsumsi listrik AC yang signifikan.</p>
                 </div>
 
-                <!-- Social -->
                 <div class="bg-white/5 border border-white/10 p-6 lg:p-8 rounded-2xl lg:rounded-3xl backdrop-blur-sm hover:bg-white/10 transition-colors">
                     <div class="h-12 w-12 lg:h-14 lg:w-14 bg-blue-500/20 text-blue-400 rounded-xl lg:rounded-2xl flex items-center justify-center text-xl lg:text-2xl mb-4 lg:mb-6"><i class="fas fa-users"></i></div>
                     <h3 class="text-lg lg:text-xl font-bold text-white mb-2 lg:mb-3">Social (Sosial)</h3>
                     <p class="text-slate-400 text-xs lg:text-sm leading-relaxed">Memastikan kenyamanan udara optimal bagi produktivitas staf & pelanggan Anda, serta memberdayakan teknisi lokal melalui program kemitraan kami.</p>
                 </div>
 
-                <!-- Governance -->
                 <div class="bg-white/5 border border-white/10 p-6 lg:p-8 rounded-2xl lg:rounded-3xl backdrop-blur-sm hover:bg-white/10 transition-colors">
                     <div class="h-12 w-12 lg:h-14 lg:w-14 bg-amber-500/20 text-amber-400 rounded-xl lg:rounded-2xl flex items-center justify-center text-xl lg:text-2xl mb-4 lg:mb-6"><i class="fas fa-balance-scale"></i></div>
                     <h3 class="text-lg lg:text-xl font-bold text-white mb-2 lg:mb-3">Governance (Tata Kelola)</h3>
@@ -624,18 +585,15 @@
         </div>
     </section>
 
-    <!-- SECTION KEMITRAAN & INVESTASI -->
     <section id="program-partner" class="py-16 lg:py-20 bg-white scroll-mt-24">
         <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-8 lg:gap-16">
-            <!-- Penjualan / Partner -->
             <div class="bg-indigo-50 border border-indigo-100 rounded-3xl lg:rounded-[2.5rem] p-8 lg:p-12 text-center flex flex-col items-center justify-center space-y-4 lg:space-y-6 hover:shadow-2xl hover:shadow-indigo-500/20 transition-all duration-500">
                 <div class="h-16 w-16 lg:h-20 lg:w-20 bg-white text-indigo-600 rounded-2xl flex items-center justify-center text-2xl lg:text-3xl shadow-sm"><i class="fas fa-bullhorn"></i></div>
                 <h3 class="text-2xl lg:text-3xl font-black text-slate-900 tracking-tight">Kemitraan Sales</h3>
-                <p class="text-slate-600 text-sm lg:text-base font-medium">Jadilah bagian dari tim penjualan Kalimaja Xtron. Nikmati komisi menarik, produk unik dengan model Zero CAPEX yang sangat mudah dijual, dan potensi recurring income.</p>
+                <p class="text-slate-600 text-sm lg:text-base font-medium">Jadilah bagian dari tim penjualan Kalimaja Airtron. Nikmati komisi menarik, produk unik dengan model Zero CAPEX yang sangat mudah dijual, dan potensi recurring income.</p>
                 <a href="https://wa.me/6285111033789?text=Halo,%20saya%20tertarik%20bergabung%20sebagai%20Sales%20Executive%20Kalimaja%20Airtron" target="_blank" class="mt-2 lg:mt-4 bg-indigo-600 text-white px-6 lg:px-8 py-3.5 lg:py-4 rounded-xl font-bold uppercase tracking-widest text-[10px] lg:text-xs hover:bg-indigo-800 transition-colors shadow-lg shadow-indigo-500/30">Daftar Partner</a>
             </div>
 
-            <!-- Investor -->
             <div id="investor" class="bg-slate-900 text-white rounded-3xl lg:rounded-[2.5rem] p-8 lg:p-12 text-center flex flex-col items-center justify-center space-y-4 lg:space-y-6 shadow-2xl hover:-translate-y-2 transition-transform duration-500 relative overflow-hidden">
                 <div class="absolute -right-10 -top-10 opacity-10"><i class="fas fa-chart-pie text-[150px] lg:text-[200px]"></i></div>
                 <div class="relative z-10 h-16 w-16 lg:h-20 lg:w-20 bg-white/10 backdrop-blur-md border border-white/20 text-amber-400 rounded-2xl flex items-center justify-center text-2xl lg:text-3xl"><i class="fas fa-chart-line"></i></div>
@@ -646,7 +604,6 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer id="contact" class="bg-slate-950 pt-16 lg:pt-20 pb-10 w-full text-white relative overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-t from-indigo-900/40 to-transparent pointer-events-none"></div>
         <div class="mx-auto max-w-7xl px-6 relative z-10">
@@ -681,25 +638,20 @@
         </div>
     </footer>
 
-    <!-- MODAL: SELF ASSESSMENT -->
     <div id="calc-modal" class="fixed inset-0 z-[100] flex items-center justify-center p-4 opacity-0 pointer-events-none transition-all duration-300">
         <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm modal-backdrop-print" onclick="closeCalcModal()"></div>
         <div class="bg-white w-full max-w-3xl rounded-2xl lg:rounded-[30px] shadow-2xl relative z-10 overflow-hidden max-h-[95vh] flex flex-col print-shadow-none">
             
-            <!-- Modal Header (Sembunyi saat print) -->
             <div class="p-4 lg:p-6 border-b border-slate-100 flex justify-between items-center bg-slate-50 no-print-calc">
                 <h3 class="text-lg lg:text-xl font-black italic uppercase tracking-tight text-indigo-950 flex items-center gap-2"><i class="fas fa-calculator text-indigo-600"></i> Self Assessment</h3>
                 <button onclick="closeCalcModal()" class="text-slate-400 hover:text-slate-900 h-8 w-8 rounded-full bg-white flex items-center justify-center shadow-sm border border-slate-200"><i class="fas fa-times"></i></button>
             </div>
 
-            <!-- Scrollable Content -->
             <div class="p-5 lg:p-8 overflow-y-auto space-y-4 lg:space-y-6 flex-1">
                 
-                <!-- SECTION 1: FORM INPUT (Sembunyi saat hasil keluar) -->
                 <div id="calc-input-section">
                     <p class="text-xs lg:text-sm text-slate-500 font-medium italic mb-4 lg:mb-6">Lengkapi identitas dan konfigurasi AC untuk mendapatkan Laporan Estimasi Penghematan khusus bisnis Anda.</p>
                     
-                    <!-- Business Identity -->
                     <div class="space-y-3 lg:space-y-4 mb-6 lg:mb-8">
                         <h4 class="text-[9px] lg:text-[10px] font-black text-indigo-600 uppercase tracking-widest border-b border-slate-100 pb-2"><i class="fas fa-building mr-1"></i> Identitas Bisnis</h4>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 lg:gap-4">
@@ -710,7 +662,6 @@
                         </div>
                     </div>
 
-                    <!-- Specs -->
                     <h4 class="text-[9px] lg:text-[10px] font-black text-indigo-600 uppercase tracking-widest border-b border-slate-100 pb-2 mb-3 lg:mb-4"><i class="fas fa-cogs mr-1"></i> Parameter Operasional</h4>
                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 lg:gap-4 mb-5 lg:mb-6">
                         <div class="space-y-1">
@@ -740,10 +691,8 @@
                     </div>
                 </div>
 
-                <!-- SECTION 2: HASIL LAPORAN (Muncul saat dihitung) -->
                 <div id="calc-report-section" class="hidden pb-6 lg:pb-10">
                     
-                    <!-- HEADER KHUSUS PRINT (Menggunakan Logo dan WA) -->
                     <div class="hidden print:flex mb-6 lg:mb-8 justify-between items-center border-b-4 border-indigo-950 pb-4 lg:pb-6">
                         <div class="flex items-center gap-4">
                             <img src="https://ik.imagekit.io/pasukandigital/pasukan-digital-id/airtron-kalimaja/airtron_kalimaja_sewa-penghemat-ac_logo.webp?tr=w-300,q-70" alt="Kalimaja Logo" class="h-12 lg:h-14 w-auto object-contain" />
@@ -758,7 +707,6 @@
                         </div>
                     </div>
 
-                    <!-- Laporan Header (Terlihat di UI dan Print) -->
                     <div class="mb-6 lg:mb-8 pb-4 lg:pb-6 border-b border-slate-200 flex justify-between items-start break-inside-avoid">
                         <div>
                             <h4 class="text-lg lg:text-2xl font-black italic text-slate-900 uppercase tracking-tighter print:hidden">Laporan Self Assessment</h4>
@@ -773,7 +721,6 @@
                         </div>
                     </div>
 
-                    <!-- Laporan Body -->
                     <div class="space-y-4 lg:space-y-6">
                         <div class="bg-slate-50 p-4 lg:p-6 rounded-xl lg:rounded-2xl border border-slate-200 break-inside-avoid">
                             <h4 class="text-[9px] lg:text-[10px] font-black text-indigo-600 uppercase tracking-widest border-b border-slate-200 pb-2 mb-3 lg:mb-4"><i class="fas fa-chart-pie mr-1"></i> Ringkasan Parameter</h4>
@@ -789,7 +736,6 @@
                             </div>
                         </div>
 
-                        <!-- Proyeksi Bulanan -->
                         <div class="bg-white p-4 lg:p-6 rounded-xl lg:rounded-2xl border border-slate-200 break-inside-avoid shadow-sm">
                             <h4 class="text-[9px] lg:text-[10px] font-black text-emerald-600 uppercase tracking-widest border-b border-slate-200 pb-2 mb-3 lg:mb-4"><i class="fas fa-wallet mr-1"></i> Proyeksi Keuangan Bulanan</h4>
                             <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 lg:gap-6">
@@ -808,7 +754,6 @@
                             </div>
                         </div>
 
-                        <!-- Proyeksi 3 Tahun -->
                         <div class="bg-indigo-950 p-4 lg:p-6 rounded-xl lg:rounded-2xl border border-indigo-900 break-inside-avoid shadow-sm print-dark-card text-white">
                             <h4 class="text-[9px] lg:text-[10px] font-black text-indigo-300 uppercase tracking-widest border-b border-indigo-800/50 pb-2 mb-3 lg:mb-4"><i class="fas fa-calendar-alt mr-1"></i> Proyeksi Akumulasi 3 Tahun (36 Bulan)</h4>
                             <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 lg:gap-6">
@@ -827,17 +772,27 @@
                             </div>
                         </div>
 
-                        <!-- CAPEX & BEP -->
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6 break-inside-avoid">
-                            <div class="bg-amber-50 p-4 lg:p-6 rounded-xl lg:rounded-2xl border border-amber-200 shadow-sm flex flex-col justify-center">
-                                <span class="text-[9px] lg:text-[10px] font-black text-amber-800 uppercase tracking-widest block mb-1">Nilai Investasi (CAPEX)</span>
-                                <span id="res-capex" class="text-xl lg:text-2xl font-black text-amber-600 mono drop-shadow-sm">Rp 0</span>
-                                <span class="text-[9px] lg:text-[10px] text-amber-700 font-bold italic mt-2 block">100% Ditanggung Kalimaja (Zero CAPEX)</span>
+                        <!-- CAPEX, BEP, ROI & IRR -->
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 lg:gap-4 break-inside-avoid">
+                            <div class="bg-amber-50 p-4 lg:p-5 rounded-xl border border-amber-200 shadow-sm flex flex-col justify-center">
+                                <span class="text-[8px] lg:text-[9px] font-black text-amber-800 uppercase tracking-widest block mb-1">Investasi (CAPEX)</span>
+                                <span id="res-capex" class="text-base lg:text-xl font-black text-amber-600 mono drop-shadow-sm">Rp 0</span>
+                                <span class="text-[7px] lg:text-[8px] text-amber-700 font-bold italic mt-1 block">Zero CAPEX (Kalimaja)</span>
                             </div>
-                            <div class="bg-blue-50 p-4 lg:p-6 rounded-xl lg:rounded-2xl border border-blue-200 shadow-sm flex flex-col justify-center">
-                                <span class="text-[9px] lg:text-[10px] font-black text-blue-800 uppercase tracking-widest block mb-1">Estimasi BEP / Payback</span>
-                                <span id="res-bep" class="text-xl lg:text-2xl font-black text-blue-600 mono drop-shadow-sm">0 Bulan</span>
-                                <span class="text-[9px] lg:text-[10px] text-blue-700 font-bold italic mt-2 block">Berdasarkan total penghematan</span>
+                            <div class="bg-blue-50 p-4 lg:p-5 rounded-xl border border-blue-200 shadow-sm flex flex-col justify-center">
+                                <span class="text-[8px] lg:text-[9px] font-black text-blue-800 uppercase tracking-widest block mb-1">Payback (BEP)</span>
+                                <span id="res-bep" class="text-base lg:text-xl font-black text-blue-600 mono drop-shadow-sm">0 Bln</span>
+                                <span class="text-[7px] lg:text-[8px] text-blue-700 font-bold italic mt-1 block">Berdasarkan Total Hemat</span>
+                            </div>
+                            <div class="bg-emerald-50 p-4 lg:p-5 rounded-xl border border-emerald-200 shadow-sm flex flex-col justify-center">
+                                <span class="text-[8px] lg:text-[9px] font-black text-emerald-800 uppercase tracking-widest block mb-1">Project ROI (3th)</span>
+                                <span id="res-roi" class="text-base lg:text-xl font-black text-emerald-600 mono drop-shadow-sm">0%</span>
+                                <span class="text-[7px] lg:text-[8px] text-emerald-700 font-bold italic mt-1 block">Return on Investment</span>
+                            </div>
+                            <div class="bg-purple-50 p-4 lg:p-5 rounded-xl border border-purple-200 shadow-sm flex flex-col justify-center">
+                                <span class="text-[8px] lg:text-[9px] font-black text-purple-800 uppercase tracking-widest block mb-1">Estimasi IRR</span>
+                                <span id="res-irr" class="text-base lg:text-xl font-black text-purple-600 mono drop-shadow-sm">0%</span>
+                                <span class="text-[7px] lg:text-[8px] text-purple-700 font-bold italic mt-1 block">Acuan: Himbara + 10%</span>
                             </div>
                         </div>
                     </div>
@@ -849,22 +804,17 @@
 
             </div>
             
-            <!-- Modal Footer Buttons -->
             <div class="p-4 lg:p-6 bg-slate-50 border-t border-slate-100 no-print-calc">
-                <!-- Tombol saat mode Input -->
                 <button id="btn-calc-submit" onclick="calculateSim()" class="w-full bg-indigo-950 text-white py-3.5 lg:py-4 rounded-xl font-black uppercase tracking-widest hover:bg-black transition-all shadow-md text-[10px] lg:text-xs">Hitung Laporan Estimasi</button>
                 
-                <!-- Tombol saat mode Report -->
                 <div id="btn-calc-actions" class="hidden flex-col sm:flex-row gap-3 lg:gap-4">
                     <button onclick="resetCalc()" class="flex-1 bg-slate-200 text-slate-700 py-3.5 lg:py-4 rounded-xl font-black uppercase tracking-widest hover:bg-slate-300 transition-all text-[10px] lg:text-xs">Kembali Edit</button>
-                    <!-- Tombol ini berfungsi ganda: Mencetak PDF sekaligus Mengirim Data secara diam-diam -->
                     <button onclick="printAssessment()" class="flex-1 bg-indigo-600 text-white py-3.5 lg:py-4 rounded-xl font-black uppercase tracking-widest hover:bg-indigo-800 transition-all shadow-md text-[10px] lg:text-xs"><i class="fas fa-print mr-1"></i> Cetak Laporan PDF</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- SCRIPT UI LOGIC & GOOGLE SHEETS -->
     <script>
         // Variabel global untuk menyimpan data form sementara
         window.kalimajaLeadData = null;
@@ -983,6 +933,27 @@
             // Kalkulasi BEP (Break Even Point)
             const bepMonths = idrSavedMo > 0 ? (totalCapex / idrSavedMo).toFixed(1) : 0;
 
+            // Kalkulasi ROI (Return on Investment 3 Tahun)
+            const roi3Y = totalCapex > 0 ? (((idrSaved3Y - totalCapex) / totalCapex) * 100).toFixed(1) : 0;
+            
+            // Kalkulasi IRR (Internal Rate of Return) - Pendekatan 36 Bulan
+            let irrAnnual = 0;
+            if (totalCapex > 0 && idrSavedMo > 0) {
+                let min = 0.0;
+                let max = 1.0;
+                let irr = 0.0;
+                for (let i = 0; i < 100; i++) {
+                    irr = (min + max) / 2;
+                    let npv = -totalCapex;
+                    for (let j = 1; j <= 36; j++) {
+                        npv += idrSavedMo / Math.pow(1 + irr, j);
+                    }
+                    if (npv > 0) min = irr;
+                    else max = irr;
+                }
+                irrAnnual = (irr * 12 * 100).toFixed(1);
+            }
+
             const formatRp = (val) => new Intl.NumberFormat('id-ID', {style:'currency', currency:'IDR', maximumFractionDigits:0}).format(val);
 
             // Suntik Data ke Laporan
@@ -1005,9 +976,11 @@
             document.getElementById('res-laba-3y').innerText = formatRp(customerShare3Y);
             document.getElementById('res-rev-3y').innerText = formatRp(kalimajaShare3Y);
 
-            // Inject CAPEX & BEP
+            // Inject CAPEX, BEP, ROI, IRR
             document.getElementById('res-capex').innerText = formatRp(totalCapex);
-            document.getElementById('res-bep').innerText = bepMonths + " Bulan";
+            document.getElementById('res-bep').innerText = bepMonths + " Bln";
+            document.getElementById('res-roi').innerText = roi3Y + "%";
+            document.getElementById('res-irr').innerText = irrAnnual + "%";
 
             // Simpan data ke variabel global untuk dikirim ke Google Sheets nanti
             window.kalimajaLeadData = {
@@ -1024,7 +997,9 @@
                 customerShare: formatRp(customerShare),
                 customerShare3Y: formatRp(customerShare3Y),
                 totalCapex: formatRp(totalCapex),
-                bepMonths: bepMonths + " Bulan"
+                bepMonths: bepMonths + " Bulan",
+                roi: roi3Y + "%",
+                irr: irrAnnual + "%"
             };
             
             // Animasi Transisi Tampilan
