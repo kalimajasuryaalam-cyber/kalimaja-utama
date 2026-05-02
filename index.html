@@ -5,19 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
     <title>Solusi Penghemat Listrik AC Tanpa Dana di Muka – Hemat Tagihan Listrik Hingga 50% untuk AC, Cold Storage, dan Freezer</title>
     
-    <meta name="description" content="Solusi penghemat listrik AC tanpa dana di muka. Hemat tagihan listrik hingga 50% untuk semua AC, cold storage, dan freezer bersama Kalimaja Airtron (Zero CAPEX)." />
+    <meta name="description" content="Solusi penghemat listrik AC tanpa dana di muka. Hemat tagihan listrik hingga 50% untuk semua AC, cold storage, dan freezer bersama Kalimaja Xtron (Zero CAPEX)." />
     <meta name="keywords" content="Penghemat Listrik AC, Solusi Hemat Listrik AC, Rental Penghemat Listrik AC, Zero CAPEX Penghematan Listrik, Efisiensi Energi AC" />
     <meta name="author" content="kalimaja" />
     
-    <!-- PWA Meta Tags (Apple & Android) -->
-    <meta name="theme-color" content="#1e1b4b">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="Kalimaja">
-    <link rel="apple-touch-icon" href="https://ik.imagekit.io/pasukandigital/pasukan-digital-id/airtron-kalimaja/airtron_kalimaja_sewa-penghemat-ac_logo.webp?tr=w-192">
-    <!-- Dynamic Manifest Link -->
-    <link id="pwa-manifest" rel="manifest" href="">
-
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -42,30 +33,26 @@
         @page { size: A4 portrait; margin: 15mm; }
         @media print {
             * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
-            body, html { background: #ffffff !important; height: auto !important; overflow: visible !important; margin: 0 !important; padding: 0 !important; }
+            body { background: #ffffff !important; height: auto !important; overflow: visible !important; margin: 0 !important; padding: 0 !important; }
             
             body.print-calc-mode > *:not(#calc-modal) { display: none !important; }
 
-            /* PERBAIKAN: Ubah absolute/fixed menjadi static agar tidak nge-loop di tiap halaman */
             body.print-calc-mode #calc-modal {
-                position: static !important;
+                position: absolute !important; top: 0 !important; left: 0 !important;
                 display: block !important; opacity: 1 !important; transform: none !important;
-                background: white !important; width: 100% !important; height: auto !important;
-                padding: 0 !important; margin: 0 !important; overflow: visible !important;
-            }
-            
-            body.print-calc-mode #calc-modal > div:not(.modal-backdrop-print) {
-                position: static !important;
-                height: auto !important; max-height: none !important;
-                width: 100% !important; max-width: 100% !important;
-                box-shadow: none !important; border: none !important; border-radius: 0 !important; 
-                overflow: visible !important;
+                background: white !important; width: 100% !important; padding: 0 !important; margin: 0 !important;
+                pointer-events: auto !important;
             }
             
             body.print-calc-mode #calc-modal .modal-backdrop-print,
             body.print-calc-mode #calc-modal .no-print-calc { display: none !important; }
             
-            body.print-calc-mode .overflow-y-auto { overflow: visible !important; max-height: none !important; height: auto !important; display: block !important; }
+            body.print-calc-mode #calc-modal .print-shadow-none { 
+                box-shadow: none !important; border: none !important; border-radius: 0 !important; 
+                max-height: none !important; height: auto !important; width: 100% !important; max-width: 100% !important; 
+            }
+
+            body.print-calc-mode .overflow-y-auto { overflow: visible !important; max-height: none !important; height: auto !important; }
             .print\:block { display: block !important; }
             .print\:flex { display: flex !important; }
             .print\:hidden { display: none !important; }
@@ -75,44 +62,11 @@
             .print-dark-card { background: #f8fafc !important; color: #0f172a !important; border: 1px solid #e2e8f0 !important; }
             .print-dark-card * { color: #0f172a !important; border-color: #cbd5e1 !important; }
         }
-
-        /* Menyembunyikan bagian Klien/Testimoni saat diakses via Aplikasi (PWA) */
-        @media (display-mode: standalone) {
-            #klien-kami,
-            a[href="#klien-kami"],
-            li:has(a[href="#klien-kami"]) {
-                display: none !important;
-            }
-        }
-        
-        /* Animasi Pop-up iOS Panduan Install */
-        @keyframes slideUpFade {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .ios-prompt-anim { animation: slideUpFade 0.4s ease-out forwards; }
     </style>
 </head>
 <body class="antialiased overflow-x-hidden">
 
-    <!-- INSTALL PWA APP BUTTON -->
-    <button id="pwa-install-btn" class="fixed bottom-6 right-6 z-[100] bg-gradient-to-r from-amber-400 to-amber-500 text-slate-900 px-4 py-3 rounded-2xl shadow-2xl shadow-amber-500/40 font-black tracking-widest text-xs flex items-center gap-2 hidden transform hover:scale-105 active:scale-95 transition-all border border-amber-300">
-        <i class="fas fa-download text-base"></i>
-        <span>INSTALL APLIKASI</span>
-    </button>
-    
-    <!-- iOS INSTALL PROMPT (Hidden by default) -->
-    <div id="ios-install-prompt" class="fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] max-w-sm z-[101] bg-white rounded-2xl shadow-2xl border border-slate-200 p-4 hidden ios-prompt-anim flex-col gap-3">
-        <div class="flex justify-between items-start">
-            <h4 class="font-bold text-slate-900 text-sm">Install Aplikasi Kalimaja</h4>
-            <button onclick="document.getElementById('ios-install-prompt').classList.add('hidden')" class="text-slate-400 hover:text-slate-600"><i class="fas fa-times"></i></button>
-        </div>
-        <p class="text-xs text-slate-600">Untuk pengguna iPhone, aplikasi tidak bisa otomatis terinstall. Silakan ikuti langkah berikut:</p>
-        <div class="bg-slate-50 p-3 rounded-xl border border-slate-100 text-xs text-slate-700 space-y-2">
-            <p>1. Tekan ikon <strong>Share</strong> (Bagikan) <i class="fas fa-share-square mx-1 text-blue-500"></i> di menu bawah Safari Anda.</p>
-            <p>2. Geser ke bawah lalu pilih <strong>"Add to Home Screen"</strong> (Tambah ke Layar Utama) <i class="far fa-plus-square mx-1 text-slate-500"></i>.</p>
-        </div>
-    </div>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"kalimaja.com | Solusi Penghemat Listrik AC Tanpa Dana di Muka","url":"https://kalimaja.com","telephone":"6285111033789","address":{"@type":"PostalAddress","streetAddress":"Jl dharma kencana blok A23, RT.3/RW.11, Duri Kosambi, Kota Jakarta Barat","addressLocality":"Jakarta Barat","postalCode":"11750","addressCountry":"ID"}}</script>
 
     <nav class="fixed w-[calc(100%-2rem)] mx-4 mt-4 top-0 z-50 glass-nav shadow-lg shadow-slate-200/50 rounded-2xl transition-all duration-300">
         <div class="px-4 lg:px-5 py-2.5 lg:py-2.5 flex items-center justify-between">
@@ -183,7 +137,7 @@
                         <img id="main-diagram-img" src="diagram.jpg" 
                              alt="Installation Diagram" 
                              class="w-full h-auto object-contain transition-all duration-300" 
-                             title="Airtron Schematic Diagram"
+                             title="Xtron Schematic Diagram"
                              onerror="this.style.display='none'; document.getElementById('fallback-diagram').style.display='flex';">
                              
                         <label id="fallback-diagram" for="diagram-upload" class="cursor-pointer flex-col items-center justify-center text-slate-400 border-2 border-dashed border-slate-200 hover:border-indigo-400 hover:bg-indigo-50 hover:text-indigo-600 w-full aspect-[4/3] rounded-xl px-4 py-3 bg-slate-50 transition-all" style="display: none;">
@@ -198,7 +152,7 @@
                 </h1>
                 
                 <p class="text-slate-300 text-sm sm:text-base lg:text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed font-medium">
-                    Hemat tagihan listrik hingga 50% untuk semua AC, cold storage, dan freezer. Kalimaja Airtron menyediakan solusi efisiensi energi berbasis skema rental tanpa dana di muka.
+                    Hemat tagihan listrik hingga 50% untuk semua AC, cold storage, dan freezer. Kalimaja Xtron menyediakan solusi efisiensi energi berbasis skema rental tanpa dana di muka.
                 </p>
                 
                 <div class="flex flex-col sm:flex-row items-center gap-3 lg:gap-4 justify-center lg:justify-start pt-2">
@@ -213,7 +167,7 @@
             
             <div class="relative mx-auto w-full max-w-sm lg:max-w-full group mt-8 lg:mt-0">
                 <div class="absolute inset-0 bg-gradient-to-tr from-indigo-500 to-purple-500 rounded-3xl blur-2xl opacity-40 group-hover:opacity-60 transition-opacity duration-500"></div>
-                <img src="https://ik.imagekit.io/pasukandigital/pasukan-digital-id/airtron-kalimaja/airtron_kalimaja_sewa-penghemat-ac_hero-3.webp?tr=w-800" alt="Kalimaja Airtron Unit" class="relative z-10 w-full h-auto rounded-3xl border border-white/10 shadow-2xl object-cover transform group-hover:scale-[1.02] transition-transform duration-500" />
+                <img src="https://ik.imagekit.io/pasukandigital/pasukan-digital-id/airtron-kalimaja/airtron_kalimaja_sewa-penghemat-ac_hero-3.webp?tr=w-800" alt="Kalimaja Xtron Unit" class="relative z-10 w-full h-auto rounded-3xl border border-white/10 shadow-2xl object-cover transform group-hover:scale-[1.02] transition-transform duration-500" />
                 
                 <div class="absolute -left-2 sm:-left-4 lg:-left-6 top-6 lg:top-10 bg-white/95 backdrop-blur-md text-slate-900 p-3 lg:p-4 rounded-xl lg:rounded-2xl shadow-xl border border-slate-100 z-20 flex items-center gap-2 lg:gap-3 animate-[bounce_3s_infinite]">
                     <div class="h-8 w-8 lg:h-10 lg:w-10 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-sm lg:text-lg"><i class="fas fa-bolt"></i></div>
@@ -260,7 +214,7 @@
                     <h3 class="text-3xl lg:text-5xl font-black italic tracking-tighter uppercase leading-[1.1]">ANALISIS <span class="text-gradient">SAINS TERMAL</span></h3>
                 </div>
                 <p class="text-slate-500 max-w-lg font-medium italic text-sm md:text-base">
-                    Memahami bagaimana teknologi Kalimaja Airtron mengubah pemborosan energi menjadi penghematan kas operasional tanpa mengurangi kenyamanan.
+                    Memahami bagaimana teknologi Kalimaja Xtron mengubah pemborosan energi menjadi penghematan kas operasional tanpa mengurangi kenyamanan.
                 </p>
             </div>
 
@@ -268,7 +222,7 @@
                 <h4 class="text-lg lg:text-xl font-black italic uppercase text-indigo-950 mb-3"><i class="fas fa-info-circle text-indigo-600 mr-2"></i> HOW IT WORKS!</h4>
                 <div class="space-y-4 text-slate-700 text-sm lg:text-base leading-relaxed font-medium">
                     <p>
-                        Airtron adalah retrofit mikroprosesor yang membaca Suhu Ruangan, Koil, & Suhu Lingkungan Sekitar. Perangkat ini menggunakan berbagai algoritma kompleks dalam sistem "sirkuit loop tertutup" untuk mengoptimalkan Waktu Nyala Kompresor, guna memastikan penghematan yang tinggi sekaligus mempertahankan dan menampilkan Suhu yang Ditetapkan secara akurat.
+                        Xtron adalah retrofit mikroprosesor yang membaca Suhu Ruangan, Koil, & Suhu Lingkungan Sekitar. Perangkat ini menggunakan berbagai algoritma kompleks dalam sistem "sirkuit loop tertutup" untuk mengoptimalkan Waktu Nyala Kompresor, guna memastikan penghematan yang tinggi sekaligus mempertahankan dan menampilkan Suhu yang Ditetapkan secara akurat.
                     </p>
                     <p>
                         Retrofit PLC ini <strong>JUGA memiliki fitur Pengunci Suhu (Temperature Lock)</strong> untuk mengunci suhu acuan Anda, yang memberikan <strong>TAMBAHAN penghematan sebesar 25-35%</strong> di atas penghematan operasional standar. Dengan demikian, pelanggan melaporkan pencapaian <strong>penghematan HINGGA 50%</strong> dengan masa Pengembalian Modal (Payback) hanya dalam 3-4 bulan.
@@ -460,7 +414,10 @@
 
             <div class="snap-center shrink-0 w-[85vw] max-w-[300px] lg:max-w-[350px] bg-white border border-slate-100 rounded-2xl lg:rounded-3xl shadow-xl shadow-slate-200/30 overflow-hidden hover:-translate-y-2 transition-transform duration-300 group">
                 <div class="relative h-40 lg:h-48 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=800&auto=format&fit=crop" alt="Hotel" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=800&auto=format&fit=crop" 
+                         alt="Lobi Hotel Kota Besar" 
+                         onerror="this.src='https://placehold.co/800x600/e2e8f0/475569?text=Hotel+Lobby'"
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     <div class="absolute top-3 left-3 lg:top-4 lg:left-4 bg-black/60 backdrop-blur-sm text-white text-[10px] lg:text-xs font-bold px-3 py-1.5 rounded-full flex items-center gap-2"><i class="fas fa-hotel"></i> Hotel & Apartemen</div>
                     <div class="absolute top-3 right-3 lg:top-4 lg:right-4 bg-green-500 text-white text-[10px] lg:text-xs font-black px-3 py-1.5 rounded-full shadow-lg">40–50%</div>
                 </div>
@@ -545,7 +502,7 @@
             <div class="text-center mb-10 lg:mb-14 space-y-3 lg:space-y-4">
                 <span class="inline-block px-4 py-1.5 bg-indigo-100 text-indigo-700 font-bold text-[9px] lg:text-[10px] uppercase tracking-[0.2em] rounded-full">Testimonials</span>
                 <h2 class="text-3xl lg:text-5xl font-black tracking-tighter text-slate-900">KEPUASAN <span class="text-gradient">KLIEN KAMI</span></h2>
-                <p class="text-slate-600 text-sm lg:text-base max-w-2xl mx-auto font-medium">Berasal dari pengalaman nyata berbagai sektor industri yang telah membuktikan solusi Kalimaja Airtron.</p>
+                <p class="text-slate-600 text-sm lg:text-base max-w-2xl mx-auto font-medium">Berasal dari pengalaman nyata berbagai sektor industri yang telah membuktikan solusi Kalimaja Xtron.</p>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -553,7 +510,7 @@
                     <div class="flex gap-1 text-yellow-400 text-xs lg:text-sm">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <p class="text-slate-700 text-sm lg:text-base leading-relaxed font-medium">"Setelah menggunakan Kalimaja Airtron, tagihan listrik AC kami turun signifikan tanpa mengubah kenyamanan kerja. Skema tanpa biaya awal sangat membantu cashflow."</p>
+                    <p class="text-slate-700 text-sm lg:text-base leading-relaxed font-medium">"Setelah menggunakan Kalimaja Xtron, tagihan listrik AC kami turun signifikan tanpa mengubah kenyamanan kerja. Skema tanpa biaya awal sangat membantu cashflow."</p>
                     <div class="flex items-center gap-4 pt-4 border-t border-slate-50">
                         <div class="h-10 w-10 lg:h-12 lg:w-12 bg-indigo-50 text-indigo-600 rounded-full flex items-center justify-center font-black text-sm lg:text-base">AN</div>
                         <div>
@@ -567,7 +524,7 @@
                     <div class="flex gap-1 text-yellow-400 text-xs lg:text-sm">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                     </div>
-                    <p class="text-slate-700 text-sm lg:text-base leading-relaxed font-medium">"AC hotel kami beroperasi hampir 24 jam. Solusi dari Kalimaja Airtron terbukti menghemat listrik tanpa keluhan dari tamu. Proses instalasi sangat profesional."</p>
+                    <p class="text-slate-700 text-sm lg:text-base leading-relaxed font-medium">"AC hotel kami beroperasi hampir 24 jam. Solusi dari Kalimaja Xtron terbukti menghemat listrik tanpa keluhan dari tamu. Proses instalasi sangat profesional."</p>
                     <div class="flex items-center gap-4 pt-4 border-t border-slate-50">
                         <div class="h-10 w-10 lg:h-12 lg:w-12 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center font-black text-sm lg:text-base">MP</div>
                         <div>
@@ -603,7 +560,7 @@
                     <i class="fas fa-leaf"></i> Komitmen Keberlanjutan
                 </span>
                 <h2 class="text-3xl lg:text-5xl font-black tracking-tighter text-white">NILAI <span class="text-emerald-400">ESG KAMI</span></h2>
-                <p class="text-slate-400 text-sm lg:text-base max-w-2xl mx-auto font-medium">Kalimaja Airtron tidak hanya memberikan efisiensi biaya, tetapi juga berkontribusi pada masa depan yang lebih hijau dan berkelanjutan.</p>
+                <p class="text-slate-400 text-sm lg:text-base max-w-2xl mx-auto font-medium">Kalimaja Xtron tidak hanya memberikan efisiensi biaya, tetapi juga berkontribusi pada masa depan yang lebih hijau dan berkelanjutan.</p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
@@ -633,8 +590,8 @@
             <div class="bg-indigo-50 border border-indigo-100 rounded-3xl lg:rounded-[2.5rem] p-8 lg:p-12 text-center flex flex-col items-center justify-center space-y-4 lg:space-y-6 hover:shadow-2xl hover:shadow-indigo-500/20 transition-all duration-500">
                 <div class="h-16 w-16 lg:h-20 lg:w-20 bg-white text-indigo-600 rounded-2xl flex items-center justify-center text-2xl lg:text-3xl shadow-sm"><i class="fas fa-bullhorn"></i></div>
                 <h3 class="text-2xl lg:text-3xl font-black text-slate-900 tracking-tight">Kemitraan Sales</h3>
-                <p class="text-slate-600 text-sm lg:text-base font-medium">Jadilah bagian dari tim penjualan Kalimaja Airtron. Nikmati komisi menarik, produk unik dengan model Zero CAPEX yang sangat mudah dijual, dan potensi recurring income.</p>
-                <a href="https://wa.me/6285111033789?text=Halo,%20saya%20tertarik%20bergabung%20sebagai%20Sales%20Executive%20Kalimaja%20Airtron" target="_blank" class="mt-2 lg:mt-4 bg-indigo-600 text-white px-6 lg:px-8 py-3.5 lg:py-4 rounded-xl font-bold uppercase tracking-widest text-[11px] lg:text-xs active:scale-95 hover:bg-indigo-800 transition-all shadow-lg shadow-indigo-500/30">Daftar Partner</a>
+                <p class="text-slate-600 text-sm lg:text-base font-medium">Jadilah bagian dari tim penjualan Kalimaja Xtron. Nikmati komisi menarik, produk unik dengan model Zero CAPEX yang sangat mudah dijual, dan potensi recurring income.</p>
+                <a href="https://wa.me/6285111033789?text=Halo,%20saya%20tertarik%20bergabung%20sebagai%20Sales%20Executive%20Kalimaja%20Xtron" target="_blank" class="mt-2 lg:mt-4 bg-indigo-600 text-white px-6 lg:px-8 py-3.5 lg:py-4 rounded-xl font-bold uppercase tracking-widest text-[11px] lg:text-xs active:scale-95 hover:bg-indigo-800 transition-all shadow-lg shadow-indigo-500/30">Daftar Partner</a>
             </div>
 
             <div id="investor" class="bg-slate-900 text-white rounded-3xl lg:rounded-[2.5rem] p-8 lg:p-12 text-center flex flex-col items-center justify-center space-y-4 lg:space-y-6 shadow-2xl hover:-translate-y-2 transition-transform duration-500 relative overflow-hidden">
@@ -642,7 +599,7 @@
                 <div class="relative z-10 h-16 w-16 lg:h-20 lg:w-20 bg-white/10 backdrop-blur-md border border-white/20 text-amber-400 rounded-2xl flex items-center justify-center text-2xl lg:text-3xl"><i class="fas fa-chart-line"></i></div>
                 <h3 class="text-2xl lg:text-3xl font-black text-white tracking-tight relative z-10">Peluang Investasi</h3>
                 <p class="text-slate-400 text-sm lg:text-base font-medium relative z-10">Dukung pengadaan unit untuk perluasan proyek efisiensi energi. Sektor yang selalu dibutuhkan (listrik), tren harga yang terus naik, dan jaminan sistem bagi hasil yang stabil.</p>
-                <a href="https://wa.me/6285111033789?text=Halo,%20saya%20ingin%20menjadwalkan%20presentasi%20bisnis%20(Investor)%20Kalimaja%20Airtron" target="_blank" class="mt-2 lg:mt-4 bg-amber-500 text-slate-900 px-6 lg:px-8 py-3.5 lg:py-4 rounded-xl font-black uppercase tracking-widest text-[11px] lg:text-xs active:scale-95 hover:bg-amber-400 transition-all shadow-lg shadow-amber-500/20 relative z-10">Jadwalkan Presentasi</a>
+                <a href="https://wa.me/6285111033789?text=Halo,%20saya%20ingin%20menjadwalkan%20presentasi%20bisnis%20(Investor)%20Kalimaja%20Xtron" target="_blank" class="mt-2 lg:mt-4 bg-amber-500 text-slate-900 px-6 lg:px-8 py-3.5 lg:py-4 rounded-xl font-black uppercase tracking-widest text-[11px] lg:text-xs active:scale-95 hover:bg-amber-400 transition-all shadow-lg shadow-amber-500/20 relative z-10">Jadwalkan Presentasi</a>
             </div>
         </div>
     </section>
@@ -656,7 +613,7 @@
                     <p class="text-slate-400 text-sm lg:text-base font-medium max-w-md mx-auto md:mx-0">Survey dan audit GRATIS. Instalasi tanpa biaya. Anda hanya membayar jika penghematan benar-benar terjadi pada tagihan Anda.</p>
                 </div>
                 <div class="flex flex-col gap-3 lg:gap-4 max-w-sm mx-auto md:ml-auto md:mr-0 w-full">
-                    <a href="https://wa.me/6285111033789" target="_blank" class="flex items-center gap-4 p-4 lg:p-5 bg-white/5 hover:bg-white/10 border border-white/10 rounded-2xl transition-all group">
+                    <a href="https://wa.me/6285111033789?text=Halo%2C%20boleh%20diinfo%20xtron%20lebih%20detail%3F" target="_blank" class="flex items-center gap-4 p-4 lg:p-5 bg-white/5 hover:bg-white/10 border border-white/10 rounded-2xl transition-all group">
                         <div class="h-12 w-12 lg:h-12 lg:w-12 bg-green-500/20 text-green-400 rounded-xl flex items-center justify-center text-lg lg:text-xl group-hover:scale-110 transition-transform"><i class="fab fa-whatsapp"></i></div>
                         <div class="text-left">
                             <p class="text-[9px] lg:text-[10px] font-bold uppercase tracking-widest text-slate-400">Konsultasi Cepat</p>
@@ -742,7 +699,7 @@
                         <div class="flex items-center gap-4">
                             <img src="https://ik.imagekit.io/pasukandigital/pasukan-digital-id/airtron-kalimaja/airtron_kalimaja_sewa-penghemat-ac_logo.webp?tr=w-300,q-70" alt="Kalimaja Logo" class="h-12 lg:h-14 w-auto object-contain" />
                             <div class="text-left">
-                                <h1 class="text-2xl lg:text-3xl font-black italic uppercase text-indigo-950 tracking-tighter leading-none">KALIMAJA AIRTRON</h1>
+                                <h1 class="text-2xl lg:text-3xl font-black italic uppercase text-indigo-950 tracking-tighter leading-none">KALIMAJA XTRON</h1>
                                 <p class="text-[9px] lg:text-[10px] font-bold text-slate-500 uppercase tracking-widest mt-1">Laporan Estimasi Efisiensi Energi (Zero CAPEX)</p>
                             </div>
                         </div>
@@ -829,38 +786,26 @@
                         </div>
 
                         <!-- BEP, ROI & IRR -->
-                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 lg:gap-4 break-inside-avoid">
-                            <div class="bg-blue-50 p-4 lg:p-5 rounded-xl lg:rounded-2xl border border-blue-200 shadow-sm flex flex-col justify-center">
-                                <span class="text-[9px] lg:text-[10px] font-black text-blue-800 uppercase tracking-widest block mb-1">Payback (BEP)</span>
-                                <span id="res-bep" class="text-xl lg:text-2xl font-black text-blue-600 mono drop-shadow-sm">0 Bln</span>
-                                <span class="text-[9px] sm:text-[9px] text-blue-700 font-medium mt-1 block">Berdasarkan Total Hemat</span>
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 lg:gap-4 break-inside-avoid">
+                            <div class="bg-amber-50 p-4 lg:p-5 rounded-xl border border-amber-200 shadow-sm flex flex-col justify-center">
+                                <span class="text-[8px] lg:text-[9px] font-black text-amber-800 uppercase tracking-widest block mb-1">Investasi (CAPEX)</span>
+                                <span id="res-capex-mini" class="text-base lg:text-xl font-black text-amber-600 mono drop-shadow-sm">Rp 0</span>
+                                <span class="text-[7px] lg:text-[8px] text-amber-700 font-bold italic mt-1 block">Zero CAPEX (Kalimaja)</span>
                             </div>
-                            <div class="bg-emerald-50 p-4 lg:p-5 rounded-xl lg:rounded-2xl border border-emerald-200 shadow-sm flex flex-col justify-center">
-                                <span class="text-[9px] lg:text-[10px] font-black text-emerald-800 uppercase tracking-widest block mb-1">Project ROI (3th)</span>
-                                <span id="res-roi" class="text-xl lg:text-2xl font-black text-emerald-600 mono drop-shadow-sm">0%</span>
-                                <span class="text-[9px] sm:text-[9px] text-emerald-700 font-medium mt-1 block">Return on Investment</span>
+                            <div class="bg-blue-50 p-4 lg:p-5 rounded-xl border border-blue-200 shadow-sm flex flex-col justify-center">
+                                <span class="text-[8px] lg:text-[9px] font-black text-blue-800 uppercase tracking-widest block mb-1">Payback (BEP)</span>
+                                <span id="res-bep" class="text-base lg:text-xl font-black text-blue-600 mono drop-shadow-sm">0 Bln</span>
+                                <span class="text-[7px] lg:text-[8px] text-blue-700 font-bold italic mt-1 block">Berdasarkan Total Hemat</span>
                             </div>
-                            <div class="bg-purple-50 p-4 lg:p-5 rounded-xl lg:rounded-2xl border border-purple-200 shadow-sm flex flex-col justify-center">
-                                <span class="text-[9px] lg:text-[10px] font-black text-purple-800 uppercase tracking-widest block mb-1">Estimasi IRR</span>
-                                <span id="res-irr" class="text-xl lg:text-2xl font-black text-purple-600 mono drop-shadow-sm">0%</span>
-                                <span class="text-[9px] sm:text-[9px] text-purple-700 font-medium mt-1 block">Acuan: Himbara + 10%</span>
+                            <div class="bg-emerald-50 p-4 lg:p-5 rounded-xl border border-emerald-200 shadow-sm flex flex-col justify-center">
+                                <span class="text-[8px] lg:text-[9px] font-black text-emerald-800 uppercase tracking-widest block mb-1">Project ROI (3th)</span>
+                                <span id="res-roi" class="text-base lg:text-xl font-black text-emerald-600 mono drop-shadow-sm">0%</span>
+                                <span class="text-[7px] lg:text-[8px] text-emerald-700 font-bold italic mt-1 block">Return on Investment</span>
                             </div>
-                        </div>
-
-                        <!-- Dampak ESG Highlight -->
-                        <div class="bg-emerald-50 p-5 lg:p-6 rounded-xl lg:rounded-2xl border border-emerald-200 break-inside-avoid shadow-sm">
-                            <h4 class="text-[9px] lg:text-[10px] font-black text-emerald-800 uppercase tracking-widest border-b border-emerald-200/50 pb-2 mb-3 lg:mb-4"><i class="fas fa-leaf mr-1 text-emerald-600"></i> Dampak ESG & Jejak Karbon (3 Tahun)</h4>
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 lg:gap-4">
-                                <div class="bg-white p-3 lg:p-4 rounded-lg lg:rounded-xl border border-emerald-100 flex flex-col justify-center">
-                                    <span class="text-[9px] lg:text-[10px] font-black text-slate-500 uppercase tracking-widest block mb-1">Reduksi Emisi CO₂</span>
-                                    <span id="res-co2-3y" class="text-xl lg:text-2xl font-black text-emerald-600 mono drop-shadow-sm">0 kg</span>
-                                    <span class="text-[9px] sm:text-[9px] text-slate-400 font-medium mt-1 block">Kontribusi Net Zero Emission</span>
-                                </div>
-                                <div class="bg-white p-3 lg:p-4 rounded-lg lg:rounded-xl border border-emerald-100 flex flex-col justify-center">
-                                    <span class="text-[9px] lg:text-[10px] font-black text-slate-500 uppercase tracking-widest block mb-1">Ekuivalen Tanam Pohon</span>
-                                    <span id="res-tree-3y" class="text-xl lg:text-2xl font-black text-emerald-600 mono drop-shadow-sm">0 Pohon</span>
-                                    <span class="text-[9px] sm:text-[9px] text-slate-400 font-medium mt-1 block">Daya Serap Alamiah Hutan</span>
-                                </div>
+                            <div class="bg-purple-50 p-4 lg:p-5 rounded-xl border border-purple-200 shadow-sm flex flex-col justify-center">
+                                <span class="text-[8px] lg:text-[9px] font-black text-purple-800 uppercase tracking-widest block mb-1">Estimasi IRR</span>
+                                <span id="res-irr" class="text-base lg:text-xl font-black text-purple-600 mono drop-shadow-sm">0%</span>
+                                <span class="text-[7px] lg:text-[8px] text-purple-700 font-bold italic mt-1 block">Acuan: Himbara + 10%</span>
                             </div>
                         </div>
                     </div>
@@ -884,118 +829,6 @@
     </div>
 
     <script>
-        // === SCRIPT KHUSUS PWA (ADD TO HOME SCREEN) ===
-        // Karena harus di 1 file, kita generate manifest dan service worker lewat blob.
-
-        // 1. Generate Manifest with 3D Xtron SVG Icon
-        const xtronSvgIconUrl = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cdefs%3E%3CradialGradient id='bg' cx='30%25' cy='30%25' r='70%25'%3E%3Cstop offset='0%25' stop-color='%23ff4d4d'/%3E%3Cstop offset='50%25' stop-color='%23cc0000'/%3E%3Cstop offset='100%25' stop-color='%23660000'/%3E%3C/radialGradient%3E%3ClinearGradient id='shine' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23ffffff' stop-opacity='0.8'/%3E%3Cstop offset='40%25' stop-color='%23ffffff' stop-opacity='0'/%3E%3Cstop offset='100%25' stop-color='%23000000' stop-opacity='0.5'/%3E%3C/linearGradient%3E%3Cfilter id='shadow' x='-10%25' y='-10%25' width='120%25' height='120%25'%3E%3CfeDropShadow dx='0' dy='10' stdDeviation='15' flood-color='%23000' flood-opacity='0.6'/%3E%3C/filter%3E%3C/defs%3E%3Ccircle cx='256' cy='256' r='240' fill='url(%23bg)' filter='url(%23shadow)'/%3E%3Ccircle cx='256' cy='256' r='240' fill='url(%23shine)'/%3E%3Ctext x='256' y='290' font-family='Arial, sans-serif' font-weight='900' font-size='200' fill='%23ffffff' text-anchor='middle' filter='url(%23shadow)'%3EXT%3C/text%3E%3Ccircle cx='256' cy='256' r='220' fill='none' stroke='%23ff9999' stroke-width='8' opacity='0.5'/%3E%3Ctext x='256' y='380' font-family='Arial, sans-serif' font-weight='bold' font-size='40' fill='%23ffcccc' text-anchor='middle' letter-spacing='10'%3EXTRON%3C/text%3E%3C/svg%3E";
-
-        // Update Apple touch icon dynamically so it gets the 3D Xtron icon
-        document.querySelector('link[rel="apple-touch-icon"]').href = xtronSvgIconUrl;
-
-        const pwaManifest = {
-            "name": "Xtron Energy Solution",
-            "short_name": "Xtron",
-            "description": "Solusi Penghemat Listrik AC Zero CAPEX",
-            "start_url": "./",
-            "display": "standalone",
-            "background_color": "#ffffff",
-            "theme_color": "#1e1b4b",
-            "icons": [
-                {
-                    "src": xtronSvgIconUrl,
-                    "sizes": "512x512",
-                    "type": "image/svg+xml",
-                    "purpose": "any maskable"
-                }
-            ]
-        };
-
-        const stringManifest = JSON.stringify(pwaManifest);
-        const blobManifest = new Blob([stringManifest], {type: 'application/json'});
-        const manifestURL = URL.createObjectURL(blobManifest);
-        document.getElementById('pwa-manifest').setAttribute('href', manifestURL);
-
-        // 2. Generate and Register Service Worker
-        const swCode = `
-            self.addEventListener('install', (e) => { self.skipWaiting(); });
-            self.addEventListener('activate', (e) => { e.waitUntil(clients.claim()); });
-            self.addEventListener('fetch', (e) => { 
-                e.respondWith(fetch(e.request).catch(() => new Response('Tampaknya Anda sedang offline.')));
-            });
-        `;
-        const blobSW = new Blob([swCode], {type: 'application/javascript'});
-        const swURL = URL.createObjectURL(blobSW);
-
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register(swURL).then(registration => {
-                    console.log('ServiceWorker PWA Kalimaja berhasil didaftarkan');
-                }).catch(err => {
-                    console.log('Registrasi ServiceWorker gagal: ', err);
-                });
-            });
-        }
-
-        // 3. Tangkap Event Install dan Munculkan Tombol
-        let deferredPrompt;
-        const installBtn = document.getElementById('pwa-install-btn');
-        const iosPrompt = document.getElementById('ios-install-prompt');
-        
-        // Deteksi apakah user buka dari HP (Android/iOS)
-        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-        // Deteksi spesifik Apple iOS
-        const isIos = /iPhone|iPad|iPod/i.test(navigator.userAgent);
-        // Cek apakah web sudah dibuka di dalam mode Aplikasi (standalone)
-        const isInStandaloneMode = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
-
-        if (isMobile && !isInStandaloneMode) {
-            if (isIos) {
-                // UNTUK PENGGUNA iPHONE (Safari memblokir auto install)
-                installBtn.style.display = 'flex';
-                installBtn.addEventListener('click', () => {
-                    // Memunculkan kotak panduan manual khusus Apple
-                    iosPrompt.classList.remove('hidden');
-                    iosPrompt.classList.add('flex');
-                });
-            } else {
-                // UNTUK PENGGUNA ANDROID
-                window.addEventListener('beforeinstallprompt', (e) => {
-                    // Cegah prompt bawaan browser
-                    e.preventDefault();
-                    // Simpan event sehingga bisa dipicu nanti
-                    deferredPrompt = e;
-                    // Tampilkan tombol kita
-                    installBtn.style.display = 'flex';
-                });
-
-                installBtn.addEventListener('click', async () => {
-                    if (deferredPrompt) {
-                        // Tampilkan prompt ke layar Android
-                        deferredPrompt.prompt();
-                        // Tunggu respon user
-                        const { outcome } = await deferredPrompt.userChoice;
-                        if (outcome === 'accepted') {
-                            console.log('User menginstal aplikasi');
-                        }
-                        // Hapus prompt
-                        deferredPrompt = null;
-                        installBtn.style.display = 'none';
-                    } else {
-                        // Fallback jika beforeinstallprompt gagal terpanggil di Android (misal buka dari In-App Browser)
-                        alert("Gagal memanggil fungsi install. Pastikan Anda membuka link ini melalui Google Chrome (bukan browser bawaan WA/Instagram) dan menggunakan HTTPS.");
-                    }
-                });
-            }
-        }
-
-        window.addEventListener('appinstalled', (evt) => {
-            console.log('Aplikasi Kalimaja sukses terinstal di HP');
-            installBtn.style.display = 'none';
-        });
-
-
-        // === FUNGSI BAWAAN APLIKASI KALIMAJA ===
         // Variabel global untuk menyimpan data form sementara
         window.kalimajaLeadData = null;
 
@@ -1110,14 +943,6 @@
             const customerShare3Y = customerShare * 36;
             const kalimajaShare3Y = kalimajaShare * 36;
 
-            // Kalkulasi ESG (Carbon Footprint Reduction)
-            const emissionFactor = 0.87; // Rata-rata PLN Grid Indonesia: 0.87 kg CO2 per kWh
-            const kwhSavedMo = kwhNormalMo - kwhOptMo;
-            const kwhSaved3Y = kwhSavedMo * 36;
-            const co2Saved3Y = kwhSaved3Y * emissionFactor;
-            // 1 pohon dewasa menyerap ~22kg CO2 per tahun -> 66kg selama rentang proyek 3 tahun
-            const treesEquivalent3Y = co2Saved3Y / 66; 
-
             // Kalkulasi BEP (Break Even Point)
             const bepMonths = idrSavedMo > 0 ? (totalCapex / idrSavedMo).toFixed(1) : 0;
 
@@ -1164,12 +989,9 @@
             document.getElementById('res-laba-3y').innerText = formatRp(customerShare3Y);
             document.getElementById('res-rev-3y').innerText = formatRp(kalimajaShare3Y);
 
-            // Inject DOM ESG
-            document.getElementById('res-co2-3y').innerText = new Intl.NumberFormat('id-ID', {maximumFractionDigits:0}).format(co2Saved3Y) + " kg";
-            document.getElementById('res-tree-3y').innerText = new Intl.NumberFormat('id-ID', {maximumFractionDigits:0}).format(treesEquivalent3Y) + " Pohon";
-
             // Inject CAPEX, BEP, ROI, IRR
             document.getElementById('res-capex').innerText = formatRp(totalCapex);
+            document.getElementById('res-capex-mini').innerText = formatRp(totalCapex);
             document.getElementById('res-bep').innerText = bepMonths + " Bln";
             document.getElementById('res-roi').innerText = roi3Y + "%";
             document.getElementById('res-irr').innerText = irrAnnual + "%";
@@ -1191,9 +1013,7 @@
                 totalCapex: formatRp(totalCapex),
                 bepMonths: bepMonths + " Bulan",
                 roi: roi3Y + "%",
-                irr: irrAnnual + "%",
-                co2Saved3Y: new Intl.NumberFormat('id-ID', {maximumFractionDigits:0}).format(co2Saved3Y) + " kg",
-                treesEquivalent3Y: new Intl.NumberFormat('id-ID', {maximumFractionDigits:0}).format(treesEquivalent3Y) + " Pohon"
+                irr: irrAnnual + "%"
             };
             
             // Animasi Transisi Tampilan
