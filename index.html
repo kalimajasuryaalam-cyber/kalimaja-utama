@@ -786,12 +786,7 @@
                         </div>
 
                         <!-- BEP, ROI & IRR -->
-                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 lg:gap-4 break-inside-avoid">
-                            <div class="bg-amber-50 p-4 lg:p-5 rounded-xl border border-amber-200 shadow-sm flex flex-col justify-center">
-                                <span class="text-[8px] lg:text-[9px] font-black text-amber-800 uppercase tracking-widest block mb-1">Investasi (CAPEX)</span>
-                                <span id="res-capex-mini" class="text-base lg:text-xl font-black text-amber-600 mono drop-shadow-sm">Rp 0</span>
-                                <span class="text-[7px] lg:text-[8px] text-amber-700 font-bold italic mt-1 block">Zero CAPEX (Kalimaja)</span>
-                            </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 lg:gap-4 break-inside-avoid">
                             <div class="bg-blue-50 p-4 lg:p-5 rounded-xl border border-blue-200 shadow-sm flex flex-col justify-center">
                                 <span class="text-[8px] lg:text-[9px] font-black text-blue-800 uppercase tracking-widest block mb-1">Payback (BEP)</span>
                                 <span id="res-bep" class="text-base lg:text-xl font-black text-blue-600 mono drop-shadow-sm">0 Bln</span>
@@ -991,7 +986,6 @@
 
             // Inject CAPEX, BEP, ROI, IRR
             document.getElementById('res-capex').innerText = formatRp(totalCapex);
-            document.getElementById('res-capex-mini').innerText = formatRp(totalCapex);
             document.getElementById('res-bep').innerText = bepMonths + " Bln";
             document.getElementById('res-roi').innerText = roi3Y + "%";
             document.getElementById('res-irr').innerText = irrAnnual + "%";
