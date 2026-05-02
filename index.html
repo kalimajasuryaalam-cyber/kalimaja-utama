@@ -9,6 +9,15 @@
     <meta name="keywords" content="Penghemat Listrik AC, Solusi Hemat Listrik AC, Rental Penghemat Listrik AC, Zero CAPEX Penghematan Listrik, Efisiensi Energi AC" />
     <meta name="author" content="kalimaja" />
     
+    <!-- PWA Meta Tags (Apple & Android) -->
+    <meta name="theme-color" content="#1e1b4b">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Kalimaja">
+    <link rel="apple-touch-icon" href="https://ik.imagekit.io/pasukandigital/pasukan-digital-id/airtron-kalimaja/airtron_kalimaja_sewa-penghemat-ac_logo.webp?tr=w-192">
+    <!-- Dynamic Manifest Link -->
+    <link id="pwa-manifest" rel="manifest" href="">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -62,11 +71,26 @@
             .print-dark-card { background: #f8fafc !important; color: #0f172a !important; border: 1px solid #e2e8f0 !important; }
             .print-dark-card * { color: #0f172a !important; border-color: #cbd5e1 !important; }
         }
+
+        /* Menyembunyikan bagian Klien/Testimoni saat diakses via Aplikasi (PWA) */
+        @media (display-mode: standalone) {
+            #klien-kami,
+            a[href="#klien-kami"],
+            li:has(a[href="#klien-kami"]) {
+                display: none !important;
+            }
+        }
     </style>
 </head>
 <body class="antialiased overflow-x-hidden">
 
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"kalimaja.com | Solusi Penghemat Listrik AC Tanpa Dana di Muka","url":"https://kalimaja.com","telephone":"6285111033789","address":{"@type":"PostalAddress","streetAddress":"Jl dharma kencana blok A23, RT.3/RW.11, Duri Kosambi, Kota Jakarta Barat","addressLocality":"Jakarta Barat","postalCode":"11750","addressCountry":"ID"}}</script>
+
+    <!-- INSTALL PWA APP BUTTON -->
+    <button id="pwa-install-btn" class="fixed bottom-6 right-6 z-[100] bg-gradient-to-r from-amber-400 to-amber-500 text-slate-900 px-4 py-3 rounded-2xl shadow-2xl shadow-amber-500/40 font-black tracking-widest text-xs items-center gap-2 hidden transform hover:scale-105 active:scale-95 transition-all border border-amber-300">
+        <i class="fas fa-download text-base"></i>
+        <span>INSTALL APLIKASI</span>
+    </button>
 
     <nav class="fixed w-[calc(100%-2rem)] mx-4 mt-4 top-0 z-50 glass-nav shadow-lg shadow-slate-200/50 rounded-2xl transition-all duration-300">
         <div class="px-4 lg:px-5 py-2.5 lg:py-2.5 flex items-center justify-between">
@@ -414,10 +438,7 @@
 
             <div class="snap-center shrink-0 w-[85vw] max-w-[300px] lg:max-w-[350px] bg-white border border-slate-100 rounded-2xl lg:rounded-3xl shadow-xl shadow-slate-200/30 overflow-hidden hover:-translate-y-2 transition-transform duration-300 group">
                 <div class="relative h-40 lg:h-48 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=800&auto=format&fit=crop" 
-                         alt="Lobi Hotel Kota Besar" 
-                         onerror="this.src='https://placehold.co/800x600/e2e8f0/475569?text=Hotel+Lobby'"
-                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=800&auto=format&fit=crop" alt="Hotel" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     <div class="absolute top-3 left-3 lg:top-4 lg:left-4 bg-black/60 backdrop-blur-sm text-white text-[10px] lg:text-xs font-bold px-3 py-1.5 rounded-full flex items-center gap-2"><i class="fas fa-hotel"></i> Hotel & Apartemen</div>
                     <div class="absolute top-3 right-3 lg:top-4 lg:right-4 bg-green-500 text-white text-[10px] lg:text-xs font-black px-3 py-1.5 rounded-full shadow-lg">40–50%</div>
                 </div>
@@ -613,7 +634,7 @@
                     <p class="text-slate-400 text-sm lg:text-base font-medium max-w-md mx-auto md:mx-0">Survey dan audit GRATIS. Instalasi tanpa biaya. Anda hanya membayar jika penghematan benar-benar terjadi pada tagihan Anda.</p>
                 </div>
                 <div class="flex flex-col gap-3 lg:gap-4 max-w-sm mx-auto md:ml-auto md:mr-0 w-full">
-                    <a href="https://wa.me/6285111033789?text=Halo%2C%20boleh%20diinfo%20airtron%20lebih%20detail%3F" target="_blank" class="flex items-center gap-4 p-4 lg:p-5 bg-white/5 hover:bg-white/10 border border-white/10 rounded-2xl transition-all group">
+                    <a href="https://wa.me/6285111033789" target="_blank" class="flex items-center gap-4 p-4 lg:p-5 bg-white/5 hover:bg-white/10 border border-white/10 rounded-2xl transition-all group">
                         <div class="h-12 w-12 lg:h-12 lg:w-12 bg-green-500/20 text-green-400 rounded-xl flex items-center justify-center text-lg lg:text-xl group-hover:scale-110 transition-transform"><i class="fab fa-whatsapp"></i></div>
                         <div class="text-left">
                             <p class="text-[9px] lg:text-[10px] font-bold uppercase tracking-widest text-slate-400">Konsultasi Cepat</p>
@@ -824,6 +845,94 @@
     </div>
 
     <script>
+        // === SCRIPT KHUSUS PWA (ADD TO HOME SCREEN) ===
+        // Karena harus di 1 file, kita generate manifest dan service worker lewat blob.
+
+        // 1. Generate Manifest
+        const pwaManifest = {
+            "name": "Aplikasi Kalimaja Airtron",
+            "short_name": "Kalimaja",
+            "description": "Solusi Penghemat Listrik AC Zero CAPEX",
+            "start_url": "./",
+            "display": "standalone",
+            "background_color": "#ffffff",
+            "theme_color": "#1e1b4b",
+            "icons": [
+                {
+                    "src": "https://ik.imagekit.io/pasukandigital/pasukan-digital-id/airtron-kalimaja/airtron_kalimaja_sewa-penghemat-ac_logo.webp?tr=w-192",
+                    "sizes": "192x192",
+                    "type": "image/webp",
+                    "purpose": "any maskable"
+                },
+                {
+                    "src": "https://ik.imagekit.io/pasukandigital/pasukan-digital-id/airtron-kalimaja/airtron_kalimaja_sewa-penghemat-ac_logo.webp?tr=w-512",
+                    "sizes": "512x512",
+                    "type": "image/webp"
+                }
+            ]
+        };
+
+        const stringManifest = JSON.stringify(pwaManifest);
+        const blobManifest = new Blob([stringManifest], {type: 'application/json'});
+        const manifestURL = URL.createObjectURL(blobManifest);
+        document.getElementById('pwa-manifest').setAttribute('href', manifestURL);
+
+        // 2. Generate and Register Service Worker
+        const swCode = `
+            self.addEventListener('install', (e) => { self.skipWaiting(); });
+            self.addEventListener('activate', (e) => { e.waitUntil(clients.claim()); });
+            self.addEventListener('fetch', (e) => { 
+                e.respondWith(fetch(e.request).catch(() => new Response('Tampaknya Anda sedang offline.')));
+            });
+        `;
+        const blobSW = new Blob([swCode], {type: 'application/javascript'});
+        const swURL = URL.createObjectURL(blobSW);
+
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register(swURL).then(registration => {
+                    console.log('ServiceWorker PWA Kalimaja berhasil didaftarkan');
+                }).catch(err => {
+                    console.log('Registrasi ServiceWorker gagal: ', err);
+                });
+            });
+        }
+
+        // 3. Tangkap Event Install dan Munculkan Tombol
+        let deferredPrompt;
+        const installBtn = document.getElementById('pwa-install-btn');
+
+        window.addEventListener('beforeinstallprompt', (e) => {
+            // Cegah prompt bawaan browser
+            e.preventDefault();
+            // Simpan event sehingga bisa dipicu nanti
+            deferredPrompt = e;
+            // Tampilkan tombol kita
+            installBtn.style.display = 'flex';
+        });
+
+        installBtn.addEventListener('click', async () => {
+            if (deferredPrompt) {
+                // Tampilkan prompt ke layar
+                deferredPrompt.prompt();
+                // Tunggu respon user
+                const { outcome } = await deferredPrompt.userChoice;
+                if (outcome === 'accepted') {
+                    console.log('User menginstal aplikasi');
+                }
+                // Hapus prompt
+                deferredPrompt = null;
+                installBtn.style.display = 'none';
+            }
+        });
+
+        window.addEventListener('appinstalled', (evt) => {
+            console.log('Aplikasi Kalimaja sukses terinstal di HP');
+            installBtn.style.display = 'none';
+        });
+
+
+        // === FUNGSI BAWAAN APLIKASI KALIMAJA ===
         // Variabel global untuk menyimpan data form sementara
         window.kalimajaLeadData = null;
 
