@@ -42,26 +42,30 @@
         @page { size: A4 portrait; margin: 15mm; }
         @media print {
             * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
-            body { background: #ffffff !important; height: auto !important; overflow: visible !important; margin: 0 !important; padding: 0 !important; }
+            body, html { background: #ffffff !important; height: auto !important; overflow: visible !important; margin: 0 !important; padding: 0 !important; }
             
             body.print-calc-mode > *:not(#calc-modal) { display: none !important; }
 
+            /* PERBAIKAN: Ubah absolute/fixed menjadi static agar tidak nge-loop di tiap halaman */
             body.print-calc-mode #calc-modal {
-                position: absolute !important; top: 0 !important; left: 0 !important;
+                position: static !important;
                 display: block !important; opacity: 1 !important; transform: none !important;
-                background: white !important; width: 100% !important; padding: 0 !important; margin: 0 !important;
-                pointer-events: auto !important;
+                background: white !important; width: 100% !important; height: auto !important;
+                padding: 0 !important; margin: 0 !important; overflow: visible !important;
+            }
+            
+            body.print-calc-mode #calc-modal > div:not(.modal-backdrop-print) {
+                position: static !important;
+                height: auto !important; max-height: none !important;
+                width: 100% !important; max-width: 100% !important;
+                box-shadow: none !important; border: none !important; border-radius: 0 !important; 
+                overflow: visible !important;
             }
             
             body.print-calc-mode #calc-modal .modal-backdrop-print,
             body.print-calc-mode #calc-modal .no-print-calc { display: none !important; }
             
-            body.print-calc-mode #calc-modal .print-shadow-none { 
-                box-shadow: none !important; border: none !important; border-radius: 0 !important; 
-                max-height: none !important; height: auto !important; width: 100% !important; max-width: 100% !important; 
-            }
-
-            body.print-calc-mode .overflow-y-auto { overflow: visible !important; max-height: none !important; height: auto !important; }
+            body.print-calc-mode .overflow-y-auto { overflow: visible !important; max-height: none !important; height: auto !important; display: block !important; }
             .print\:block { display: block !important; }
             .print\:flex { display: flex !important; }
             .print\:hidden { display: none !important; }
@@ -80,17 +84,35 @@
                 display: none !important;
             }
         }
+        
+        /* Animasi Pop-up iOS Panduan Install */
+        @keyframes slideUpFade {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .ios-prompt-anim { animation: slideUpFade 0.4s ease-out forwards; }
     </style>
 </head>
 <body class="antialiased overflow-x-hidden">
 
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"kalimaja.com | Solusi Penghemat Listrik AC Tanpa Dana di Muka","url":"https://kalimaja.com","telephone":"6285111033789","address":{"@type":"PostalAddress","streetAddress":"Jl dharma kencana blok A23, RT.3/RW.11, Duri Kosambi, Kota Jakarta Barat","addressLocality":"Jakarta Barat","postalCode":"11750","addressCountry":"ID"}}</script>
-
     <!-- INSTALL PWA APP BUTTON -->
-    <button id="pwa-install-btn" class="fixed bottom-6 right-6 z-[100] bg-gradient-to-r from-amber-400 to-amber-500 text-slate-900 px-4 py-3 rounded-2xl shadow-2xl shadow-amber-500/40 font-black tracking-widest text-xs items-center gap-2 hidden transform hover:scale-105 active:scale-95 transition-all border border-amber-300">
+    <button id="pwa-install-btn" class="fixed bottom-6 right-6 z-[100] bg-gradient-to-r from-amber-400 to-amber-500 text-slate-900 px-4 py-3 rounded-2xl shadow-2xl shadow-amber-500/40 font-black tracking-widest text-xs flex items-center gap-2 hidden transform hover:scale-105 active:scale-95 transition-all border border-amber-300">
         <i class="fas fa-download text-base"></i>
         <span>INSTALL APLIKASI</span>
     </button>
+    
+    <!-- iOS INSTALL PROMPT (Hidden by default) -->
+    <div id="ios-install-prompt" class="fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] max-w-sm z-[101] bg-white rounded-2xl shadow-2xl border border-slate-200 p-4 hidden ios-prompt-anim flex-col gap-3">
+        <div class="flex justify-between items-start">
+            <h4 class="font-bold text-slate-900 text-sm">Install Aplikasi Kalimaja</h4>
+            <button onclick="document.getElementById('ios-install-prompt').classList.add('hidden')" class="text-slate-400 hover:text-slate-600"><i class="fas fa-times"></i></button>
+        </div>
+        <p class="text-xs text-slate-600">Untuk pengguna iPhone, aplikasi tidak bisa otomatis terinstall. Silakan ikuti langkah berikut:</p>
+        <div class="bg-slate-50 p-3 rounded-xl border border-slate-100 text-xs text-slate-700 space-y-2">
+            <p>1. Tekan ikon <strong>Share</strong> (Bagikan) <i class="fas fa-share-square mx-1 text-blue-500"></i> di menu bawah Safari Anda.</p>
+            <p>2. Geser ke bawah lalu pilih <strong>"Add to Home Screen"</strong> (Tambah ke Layar Utama) <i class="far fa-plus-square mx-1 text-slate-500"></i>.</p>
+        </div>
+    </div>
 
     <nav class="fixed w-[calc(100%-2rem)] mx-4 mt-4 top-0 z-50 glass-nav shadow-lg shadow-slate-200/50 rounded-2xl transition-all duration-300">
         <div class="px-4 lg:px-5 py-2.5 lg:py-2.5 flex items-center justify-between">
@@ -824,6 +846,23 @@
                                 <span class="text-[9px] sm:text-[9px] text-purple-700 font-medium mt-1 block">Acuan: Himbara + 10%</span>
                             </div>
                         </div>
+
+                        <!-- Dampak ESG Highlight -->
+                        <div class="bg-emerald-50 p-5 lg:p-6 rounded-xl lg:rounded-2xl border border-emerald-200 break-inside-avoid shadow-sm">
+                            <h4 class="text-[9px] lg:text-[10px] font-black text-emerald-800 uppercase tracking-widest border-b border-emerald-200/50 pb-2 mb-3 lg:mb-4"><i class="fas fa-leaf mr-1 text-emerald-600"></i> Dampak ESG & Jejak Karbon (3 Tahun)</h4>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 lg:gap-4">
+                                <div class="bg-white p-3 lg:p-4 rounded-lg lg:rounded-xl border border-emerald-100 flex flex-col justify-center">
+                                    <span class="text-[9px] lg:text-[10px] font-black text-slate-500 uppercase tracking-widest block mb-1">Reduksi Emisi CO₂</span>
+                                    <span id="res-co2-3y" class="text-xl lg:text-2xl font-black text-emerald-600 mono drop-shadow-sm">0 kg</span>
+                                    <span class="text-[9px] sm:text-[9px] text-slate-400 font-medium mt-1 block">Kontribusi Net Zero Emission</span>
+                                </div>
+                                <div class="bg-white p-3 lg:p-4 rounded-lg lg:rounded-xl border border-emerald-100 flex flex-col justify-center">
+                                    <span class="text-[9px] lg:text-[10px] font-black text-slate-500 uppercase tracking-widest block mb-1">Ekuivalen Tanam Pohon</span>
+                                    <span id="res-tree-3y" class="text-xl lg:text-2xl font-black text-emerald-600 mono drop-shadow-sm">0 Pohon</span>
+                                    <span class="text-[9px] sm:text-[9px] text-slate-400 font-medium mt-1 block">Daya Serap Alamiah Hutan</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     
                     <div class="mt-8 lg:mt-12 pt-4 lg:pt-6 border-t border-slate-200 text-center hidden print:block" id="print-footer-info">
@@ -848,10 +887,15 @@
         // === SCRIPT KHUSUS PWA (ADD TO HOME SCREEN) ===
         // Karena harus di 1 file, kita generate manifest dan service worker lewat blob.
 
-        // 1. Generate Manifest
+        // 1. Generate Manifest with 3D Xtron SVG Icon
+        const xtronSvgIconUrl = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cdefs%3E%3CradialGradient id='bg' cx='30%25' cy='30%25' r='70%25'%3E%3Cstop offset='0%25' stop-color='%23ff4d4d'/%3E%3Cstop offset='50%25' stop-color='%23cc0000'/%3E%3Cstop offset='100%25' stop-color='%23660000'/%3E%3C/radialGradient%3E%3ClinearGradient id='shine' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23ffffff' stop-opacity='0.8'/%3E%3Cstop offset='40%25' stop-color='%23ffffff' stop-opacity='0'/%3E%3Cstop offset='100%25' stop-color='%23000000' stop-opacity='0.5'/%3E%3C/linearGradient%3E%3Cfilter id='shadow' x='-10%25' y='-10%25' width='120%25' height='120%25'%3E%3CfeDropShadow dx='0' dy='10' stdDeviation='15' flood-color='%23000' flood-opacity='0.6'/%3E%3C/filter%3E%3C/defs%3E%3Ccircle cx='256' cy='256' r='240' fill='url(%23bg)' filter='url(%23shadow)'/%3E%3Ccircle cx='256' cy='256' r='240' fill='url(%23shine)'/%3E%3Ctext x='256' y='290' font-family='Arial, sans-serif' font-weight='900' font-size='200' fill='%23ffffff' text-anchor='middle' filter='url(%23shadow)'%3EXT%3C/text%3E%3Ccircle cx='256' cy='256' r='220' fill='none' stroke='%23ff9999' stroke-width='8' opacity='0.5'/%3E%3Ctext x='256' y='380' font-family='Arial, sans-serif' font-weight='bold' font-size='40' fill='%23ffcccc' text-anchor='middle' letter-spacing='10'%3EXTRON%3C/text%3E%3C/svg%3E";
+
+        // Update Apple touch icon dynamically so it gets the 3D Xtron icon
+        document.querySelector('link[rel="apple-touch-icon"]').href = xtronSvgIconUrl;
+
         const pwaManifest = {
-            "name": "Aplikasi Kalimaja Airtron",
-            "short_name": "Kalimaja",
+            "name": "Xtron Energy Solution",
+            "short_name": "Xtron",
             "description": "Solusi Penghemat Listrik AC Zero CAPEX",
             "start_url": "./",
             "display": "standalone",
@@ -859,15 +903,10 @@
             "theme_color": "#1e1b4b",
             "icons": [
                 {
-                    "src": "https://ik.imagekit.io/pasukandigital/pasukan-digital-id/airtron-kalimaja/airtron_kalimaja_sewa-penghemat-ac_logo.webp?tr=w-192",
-                    "sizes": "192x192",
-                    "type": "image/webp",
-                    "purpose": "any maskable"
-                },
-                {
-                    "src": "https://ik.imagekit.io/pasukandigital/pasukan-digital-id/airtron-kalimaja/airtron_kalimaja_sewa-penghemat-ac_logo.webp?tr=w-512",
+                    "src": xtronSvgIconUrl,
                     "sizes": "512x512",
-                    "type": "image/webp"
+                    "type": "image/svg+xml",
+                    "purpose": "any maskable"
                 }
             ]
         };
@@ -901,30 +940,54 @@
         // 3. Tangkap Event Install dan Munculkan Tombol
         let deferredPrompt;
         const installBtn = document.getElementById('pwa-install-btn');
+        const iosPrompt = document.getElementById('ios-install-prompt');
+        
+        // Deteksi apakah user buka dari HP (Android/iOS)
+        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        // Deteksi spesifik Apple iOS
+        const isIos = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+        // Cek apakah web sudah dibuka di dalam mode Aplikasi (standalone)
+        const isInStandaloneMode = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
 
-        window.addEventListener('beforeinstallprompt', (e) => {
-            // Cegah prompt bawaan browser
-            e.preventDefault();
-            // Simpan event sehingga bisa dipicu nanti
-            deferredPrompt = e;
-            // Tampilkan tombol kita
-            installBtn.style.display = 'flex';
-        });
+        if (isMobile && !isInStandaloneMode) {
+            if (isIos) {
+                // UNTUK PENGGUNA iPHONE (Safari memblokir auto install)
+                installBtn.style.display = 'flex';
+                installBtn.addEventListener('click', () => {
+                    // Memunculkan kotak panduan manual khusus Apple
+                    iosPrompt.classList.remove('hidden');
+                    iosPrompt.classList.add('flex');
+                });
+            } else {
+                // UNTUK PENGGUNA ANDROID
+                window.addEventListener('beforeinstallprompt', (e) => {
+                    // Cegah prompt bawaan browser
+                    e.preventDefault();
+                    // Simpan event sehingga bisa dipicu nanti
+                    deferredPrompt = e;
+                    // Tampilkan tombol kita
+                    installBtn.style.display = 'flex';
+                });
 
-        installBtn.addEventListener('click', async () => {
-            if (deferredPrompt) {
-                // Tampilkan prompt ke layar
-                deferredPrompt.prompt();
-                // Tunggu respon user
-                const { outcome } = await deferredPrompt.userChoice;
-                if (outcome === 'accepted') {
-                    console.log('User menginstal aplikasi');
-                }
-                // Hapus prompt
-                deferredPrompt = null;
-                installBtn.style.display = 'none';
+                installBtn.addEventListener('click', async () => {
+                    if (deferredPrompt) {
+                        // Tampilkan prompt ke layar Android
+                        deferredPrompt.prompt();
+                        // Tunggu respon user
+                        const { outcome } = await deferredPrompt.userChoice;
+                        if (outcome === 'accepted') {
+                            console.log('User menginstal aplikasi');
+                        }
+                        // Hapus prompt
+                        deferredPrompt = null;
+                        installBtn.style.display = 'none';
+                    } else {
+                        // Fallback jika beforeinstallprompt gagal terpanggil di Android (misal buka dari In-App Browser)
+                        alert("Gagal memanggil fungsi install. Pastikan Anda membuka link ini melalui Google Chrome (bukan browser bawaan WA/Instagram) dan menggunakan HTTPS.");
+                    }
+                });
             }
-        });
+        }
 
         window.addEventListener('appinstalled', (evt) => {
             console.log('Aplikasi Kalimaja sukses terinstal di HP');
@@ -1047,6 +1110,14 @@
             const customerShare3Y = customerShare * 36;
             const kalimajaShare3Y = kalimajaShare * 36;
 
+            // Kalkulasi ESG (Carbon Footprint Reduction)
+            const emissionFactor = 0.87; // Rata-rata PLN Grid Indonesia: 0.87 kg CO2 per kWh
+            const kwhSavedMo = kwhNormalMo - kwhOptMo;
+            const kwhSaved3Y = kwhSavedMo * 36;
+            const co2Saved3Y = kwhSaved3Y * emissionFactor;
+            // 1 pohon dewasa menyerap ~22kg CO2 per tahun -> 66kg selama rentang proyek 3 tahun
+            const treesEquivalent3Y = co2Saved3Y / 66; 
+
             // Kalkulasi BEP (Break Even Point)
             const bepMonths = idrSavedMo > 0 ? (totalCapex / idrSavedMo).toFixed(1) : 0;
 
@@ -1093,6 +1164,10 @@
             document.getElementById('res-laba-3y').innerText = formatRp(customerShare3Y);
             document.getElementById('res-rev-3y').innerText = formatRp(kalimajaShare3Y);
 
+            // Inject DOM ESG
+            document.getElementById('res-co2-3y').innerText = new Intl.NumberFormat('id-ID', {maximumFractionDigits:0}).format(co2Saved3Y) + " kg";
+            document.getElementById('res-tree-3y').innerText = new Intl.NumberFormat('id-ID', {maximumFractionDigits:0}).format(treesEquivalent3Y) + " Pohon";
+
             // Inject CAPEX, BEP, ROI, IRR
             document.getElementById('res-capex').innerText = formatRp(totalCapex);
             document.getElementById('res-bep').innerText = bepMonths + " Bln";
@@ -1116,7 +1191,9 @@
                 totalCapex: formatRp(totalCapex),
                 bepMonths: bepMonths + " Bulan",
                 roi: roi3Y + "%",
-                irr: irrAnnual + "%"
+                irr: irrAnnual + "%",
+                co2Saved3Y: new Intl.NumberFormat('id-ID', {maximumFractionDigits:0}).format(co2Saved3Y) + " kg",
+                treesEquivalent3Y: new Intl.NumberFormat('id-ID', {maximumFractionDigits:0}).format(treesEquivalent3Y) + " Pohon"
             };
             
             // Animasi Transisi Tampilan
